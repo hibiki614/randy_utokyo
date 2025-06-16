@@ -1,0 +1,234 @@
+{
+  "main": {
+    "id": "11fce7952cc7539c",
+    "type": "split",
+    "children": [
+      {
+        "id": "68e2459f83cc27d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1c5a6ed6759dc10f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "inbox/線形計画問題(LP).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "線形計画問題(LP)"
+            }
+          },
+          {
+            "id": "4d867e71768d3235",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "inbox/MMCF双対問題の展開.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MMCF双対問題の展開"
+            }
+          },
+          {
+            "id": "429a915cce76f0ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "デザスタ/船越.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "船越"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ac504d4ea2b574ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "08ba5266967d1e8e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8810a169a42814bd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5f0add2c3706e879",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f282ea91228d6acb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3393b8b52dd9dc6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9737d1f93698b07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38f61e93f57299dc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "inbox/Proof of Merged problem.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Proof of Merged problem"
+            }
+          },
+          {
+            "id": "ecbced346635bdf7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "inbox/Proof of Merged problem.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Proof of Merged problem"
+            }
+          },
+          {
+            "id": "88dfa739b3a61043",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "55a32ab77029fad4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "inbox/Proof of Merged problem.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Proof of Merged problem"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "429a915cce76f0ba",
+  "lastOpenFiles": [
+    "inbox/自己紹介スライド.md",
+    "デザスタ/船越.md",
+    "デザスタ/復興デザインスタジオ.md",
+    "デザスタ",
+    "inbox/MMCF双対問題の展開.md",
+    "inbox/卒論発表.md",
+    "inbox/線形計画問題(LP).md",
+    "inbox/Dantzig-Wolfe分解.md",
+    "Coding/numpy.md",
+    "Coding/pandas.md",
+    "Coding/python.md",
+    "inbox/A SCALING ALGORITHM FOR MULTICOMMODITY FLOW PROBLEMS.md",
+    "others/お役立ちサイト.md",
+    "Coding/TeX.md",
+    "Coding/igraph.md",
+    "Coding/メモリ不足のとき.md",
+    "others/ショートカット集.md",
+    "Coding/処理時間と消費メモリの計測.md",
+    "Coding/axisの話.md",
+    "Coding",
+    "inbox/線形計画問題のおけるいくつかの分解定理.md",
+    "others/英語辞典.md",
+    "線形計画問題(LP).pdf",
+    "inbox/Proof of Merged problem.md",
+    "inbox/縮退現象.md",
+    "inbox/秋大会　ポスター発表.md",
+    "inbox/秋大会　メモ.md",
+    "inbox/研究ノート.md",
+    "inbox/感度分析.md",
+    "土木計画学秋大会　第70回.pdf",
+    "Proof of Merged problem.pdf",
+    "others",
+    "attachment",
+    "template",
+    "template",
+    "inbox"
+  ]
+}
