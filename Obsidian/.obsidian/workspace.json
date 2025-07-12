@@ -13,12 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "ITS/シミュレーションの実装方法.md",
+=======
+<<<<<<< HEAD
+                "file": "ITS/Lab-seminar0709.md",
+=======
+                "file": "ITS/シミュレーションの実装方法.md",
+>>>>>>> 974d94942daddfe61e2f83e24f0370bc599dbd72
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< Updated upstream
               "title": "シミュレーションの実装方法"
+=======
+<<<<<<< HEAD
+              "title": "Lab-seminar0709"
+=======
+              "title": "シミュレーションの実装方法"
+>>>>>>> 974d94942daddfe61e2f83e24f0370bc599dbd72
+>>>>>>> Stashed changes
             }
           },
           {
@@ -179,8 +195,21 @@
   },
   "active": "1c5a6ed6759dc10f",
   "lastOpenFiles": [
+<<<<<<< Updated upstream
     "ITS/バッチファイルについて.md",
     "ITS/シミュレーションの実装方法.md",
+=======
+<<<<<<< HEAD
+    "ITS/シミュレーションの実装.md",
+    "ITS/Lab-seminar0709.md",
+    "task manager/就活.md",
+    "task manager/タスク管理.md",
+    "デザスタ/外部提出用スライドアウトライン.md",
+=======
+    "ITS/バッチファイルについて.md",
+    "ITS/シミュレーションの実装方法.md",
+>>>>>>> 974d94942daddfe61e2f83e24f0370bc599dbd72
+>>>>>>> Stashed changes
     "task manager/影響評価.md",
     "task manager/就活.md",
     "task manager/タスク管理.md",
