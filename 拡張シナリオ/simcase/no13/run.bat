@@ -1,0 +1,21 @@
+..\..\bin\itlts.exe -v -mode mav -csv rand01\Case1_no13_r01 -casepfx Case1_no13_r01 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand02\Case1_no13_r02 -casepfx Case1_no13_r02 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand03\Case1_no13_r03 -casepfx Case1_no13_r03 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand04\Case1_no13_r04 -casepfx Case1_no13_r04 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand05\Case1_no13_r05 -casepfx Case1_no13_r05 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand06\Case1_no13_r06 -casepfx Case1_no13_r06 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand07\Case1_no13_r07 -casepfx Case1_no13_r07 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand08\Case1_no13_r08 -casepfx Case1_no13_r08 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand09\Case1_no13_r09 -casepfx Case1_no13_r09 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand10\Case1_no13_r10 -casepfx Case1_no13_r10 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand11\Case1_no13_r11 -casepfx Case1_no13_r11 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand12\Case1_no13_r12 -casepfx Case1_no13_r12 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand13\Case1_no13_r13 -casepfx Case1_no13_r13 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand14\Case1_no13_r14 -casepfx Case1_no13_r14 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand15\Case1_no13_r15 -casepfx Case1_no13_r15 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand16\Case1_no13_r16 -casepfx Case1_no13_r16 -caseext .mavn 
+..\..\bin\itlts.exe -v -mode mav -csv rand17\Case1_no13_r17 -casepfx Case1_no13_r17 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand18\Case1_no13_r18 -casepfx Case1_no13_r18 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand19\Case1_no13_r19 -casepfx Case1_no13_r19 -caseext .mavn
+..\..\bin\itlts.exe -v -mode mav -csv rand19\Case1_no13_r20 -casepfx Case1_no13_r20 -caseext .mavn
+pause -1
