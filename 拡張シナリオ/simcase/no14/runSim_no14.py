@@ -8,12 +8,12 @@ itlts_path = os.path.abspath(os.path.join(base_dir, "..", "..", "bin", "itlts.ex
 coverter_path = os.path.abspath(os.path.join(base_dir, "..", "..", "bin", "RecordExtraction.exe"))
 sevenzip_path = r"C:\Program Files\7-Zip\7z.exe"
 
-case_no = "no01"
+case_no = "no14"
 
 command_pairs = []
 
 # 01〜20 の乱数ファイルに対応
-for i in range(1, 3):
+for i in range(1, 21):
     rand_id = f"{i:02d}"
     rand_group = f"rand{rand_id}"
     run_no = f"r{rand_id}"

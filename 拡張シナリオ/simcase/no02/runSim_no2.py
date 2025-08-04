@@ -8,12 +8,12 @@ itlts_path = os.path.abspath(os.path.join(base_dir, "..", "..", "bin", "itlts.ex
 coverter_path = os.path.abspath(os.path.join(base_dir, "..", "..", "bin", "RecordExtraction.exe"))
 sevenzip_path = r"C:\Program Files\7-Zip\7z.exe"
 
-case_no = "no01"
+case_no = "no02"
 
 command_pairs = []
 
 # 01〜20 の乱数ファイルに対応
-for i in range(1, 3):
+for i in range(1, 21):
     rand_id = f"{i:02d}"
     rand_group = f"rand{rand_id}"
     run_no = f"r{rand_id}"
@@ -66,7 +66,7 @@ def run_pair(cmd1, cmd2, cmd3, del1, del2):
 
 
 # 最大2スレッド並列で順次実行
-with ThreadPoolExecutor(max_workers=2) as executor:
+with ThreadPoolExecutor(max_workers=4) as executor:
     futures = [executor.submit(run_pair, *pair) for pair in command_pairs]
     for future in as_completed(futures):
         pass  # 完了を待つだけ（printはrun_pair内でされる）
