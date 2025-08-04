@@ -13,7 +13,7 @@ case_no = "no02"
 command_pairs = []
 
 # 01〜20 の乱数ファイルに対応
-for i in range(1, 21):
+for i in range(1, 5):
     rand_id = f"{i:02d}"
     rand_group = f"rand{rand_id}"
     run_no = f"r{rand_id}"
