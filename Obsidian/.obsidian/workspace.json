@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "task manager/影響評価.md",
+                "file": "diary/20250716.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "影響評価"
+              "title": "20250716"
+            }
+          },
+          {
+            "id": "2f4770a5c5cc6a1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ITS/0805大口先生打ち合わせ.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "0805大口先生打ち合わせ"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "c6fed314183559d7",
@@ -168,15 +183,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2cce93d84970fe78",
+  "active": "2f4770a5c5cc6a1b",
   "lastOpenFiles": [
-    "task manager/タスク管理.md",
+    "ITS/社会的背景.md",
+    "ITS/0805大口先生打ち合わせ.md",
     "task manager/マラソン.md",
+    "ITS/abstruct.md",
+    "ITS/スケジュール.md",
+    "ITS/分析結果・考察.md",
+    "ITS/0724打ち合わせ.md",
+    "ITS/自動運転はなぜ必要か？.md",
+    "ITS/シナリオ.md",
+    "ITS/MicroAvenue.md",
+    "ITS/既往研究.md",
+    "ITS/論文リスト.md",
     "交通情報学/交通情報学.md",
-    "task manager/デザスタ.md",
-    "デザスタ/地域での実装に向けて.md",
+    "task manager/PJ管理.md",
+    "ゆうちゃんバースデー.md",
+    "ITS/影響評価.md",
+    "ITS/本当にやりたいこと.md",
+    "diary/20250723.md",
+    "デザスタ/デザスタ.md",
+    "diary/20250716.md",
+    "デザスタ/もう一度考えてみた.md",
+    "もう一度考えてみた.pdf",
+    "diary/20250715.md",
+    "task manager/就活.md",
     "ITS/シミュレーションの実装方法.md",
-    "task manager/影響評価.md",
-    "task manager/就活.md"
+    "ITS/Lab-seminar0709.md",
+    "OR/感度分析.md",
+    "diary"
   ]
 }
