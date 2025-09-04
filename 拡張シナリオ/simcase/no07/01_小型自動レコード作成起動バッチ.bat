@@ -3,7 +3,7 @@
 :: 各種パラメータ設定
 set RATE=1
 set VEHICLETYPE=I_09_1204235410434
-set NEWCASENO=03
+set NEWCASENO=07
 
 01_小型自動レコード作成.exe %RATE% 1  %VEHICLETYPE% input/Case1_no01_r01.mavn output/Case1_no%NEWCASENO%_r01.mavn
 01_小型自動レコード作成.exe %RATE% 2  %VEHICLETYPE% input/Case1_no01_r02.mavn output/Case1_no%NEWCASENO%_r02.mavn
