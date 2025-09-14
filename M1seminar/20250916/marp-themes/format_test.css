@@ -1,0 +1,139 @@
+/* @theme format_test */
+ 
+@import 'default';
+ 
+section {
+    font-family: "Arial", "Hiragino Maru Gothic ProN";
+    font-size: 30px;
+    padding-left: 40px;
+    padding-top: 100px;
+    line-height: 1.3em;
+}
+section::after {font-size: 60%;content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);}
+
+section.title {
+    color: black;
+    font-family: "Arial", "Hiragino Maru Gothic ProN";
+    font-size: 36px;
+    text-align: center;
+    padding: 40px;
+}
+section.title h1 {
+    font-family: "Arial", "Hiragino Kaku Gothic ProN";
+    font-size: 60px;
+    text-align: center;
+}
+
+section.title h2 {
+    color: black;
+    font-family: "Arial", "Hiragino Kaku Gothic ProN";
+    font-size: 50px;
+    /* text-align: center; */
+}
+
+section.title h3 {
+    color: black;
+    font-family: "Arial", "Hiragino Kaku Gothic ProN";
+    font-size: 40px;
+    padding: 40px;
+    /* text-align: center; */
+}
+
+section.neta {
+    color: black;
+    text-align: center;
+    padding-left: 40px;
+}
+
+section.neta h1 {
+    font-family: "Arial", "Hiragino Kaku Gothic ProN";
+    font-size: 70px;
+    text-align: center;
+    padding: 40px;
+}
+
+section.slides{
+    font-family: "Arial", "Hiragino Maru Gothic ProN";
+    font-size: 30px;
+    padding-left: 40px;
+    padding-top: 120px;
+    line-height: 1.3em;
+}
+
+section.slides h2 {
+    color: black;
+    font-family: "Arial", "Hiragino Kaku Gothic ProN";
+    font-size: 50px;
+    position: absolute;
+    top: 0px; left: 0px;padding: 20px 40px;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 3px double #aaa;
+}
+
+section.slides h3 {
+    font-size: 40px;
+    color: #4ac;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    line-height: calc(0.25rem * 3);
+
+}
+
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+
+section table {
+    margin: 10px auto;
+}
+
+section table td img {
+  display: block;
+  margin: 0 auto;
+}
+
+section table th {
+    background-color: var(--background-theme);
+}
+
+strong {
+    color: red;
+    font-family: "Arial", "Hiragino Kaku Gothic ProN";
+  }
+
+b {
+  background: linear-gradient(transparent 50%, #aad5ff 50%);
+  padding: 0 0.2em;
+  margin: 0 0.2em;
+}
+
+:root {
+  --fw: 1;
+}
+/* ----- レイアウト ----- */
+.flex{
+  display: flex;
+  gap: 1em;
+}
+.sa {
+  justify-content: space-around;
+  /* border: 8px dashed rgb(15, 166, 226);
+  background-color: rgb(222, 244, 255); */
+}
+.sb {
+  justify-content: space-between;
+  /* border: 8px dashed rgb(21, 17, 255);
+  background-color: rgb(222, 244, 255); */
+}
+.sa div,.sb div{
+  margin: 0.1em;
+  /* border: 8px dashed rgb(80, 177, 109);
+  background-color: rgb(227, 250, 237); */
+}
+.fw div{
+  flex: var(--fw);
+  /* background-color: rgb(244, 238, 255);
+  border: 8px dashed rgb(93, 0, 255); */
+}/* ---------- */
