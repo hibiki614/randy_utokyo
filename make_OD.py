@@ -4,7 +4,7 @@ from pathlib import Path
 import chardet
 
 # ===== 設定 =====
-case_path = Path("C:\\Users\\hibik\\github\\randy_utokyo\\拡張シナリオ\\simcase\\no07\\Case1_no07_r01.mavn")   # 読み込みたいケースファイル
+case_path = Path("C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase2\\no03\\Case1_no03_r01.mavn")   # 読み込みたいケースファイル
 out_csv = Path("OD_table_all_classes.csv")
 
 # ===== ファイルの文字コードを自動検出 =====
