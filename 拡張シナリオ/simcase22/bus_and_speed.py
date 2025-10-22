@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 import matplotlib.pyplot as plt
 
-base_dir = Path(r"C:/Users/OguchiLab/OneDrive/デスクトップ/randy_utokyo/拡張シナリオ/simcase")
+base_dir = Path(r"C:/Users/OguchiLab/OneDrive/デスクトップ/randy_utokyo/拡張シナリオ/simcase22")
 out_dir  = base_dir / "analysis"
 
 # ① no01 のバス台数（volspdベースの乱数平均）

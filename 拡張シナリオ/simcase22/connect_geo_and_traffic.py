@@ -12,7 +12,7 @@ import numpy as np
 from pathlib import Path
 
 # ===== パス設定 =====
-base_dir = Path(r"C:/Users/OguchiLab/OneDrive/デスクトップ/randy_utokyo/拡張シナリオ/simcase")
+base_dir = Path(r"C:/Users/OguchiLab/OneDrive/デスクトップ/randy_utokyo/拡張シナリオ/simcase22")
 links_geojson_path = base_dir / "network_geo/links.geojson"          # 前工程の出力
 metrics_dir        = base_dir / "analysis"               # perlink_metrics_* がある場所
 out_dir            = base_dir / "analysis"               # 出力先（analysis配下に保存）
