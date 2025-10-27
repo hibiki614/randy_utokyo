@@ -222,6 +222,9 @@ for subset_label in ["all","target","non_target"]:
         plt.savefig(out_dir/f"{fname}_{subset_label}.png", dpi=300)
         plt.close()
 
+
+
+
     save_ts("V_net_mean", "平均速度 [km/h]", "timeseries_speed")
     save_ts("TTT_mean", "TTT [sec]", "timeseries_ttt")
     save_ts("flow_kmveh_mean", "総走行距離 [台・km/15分]", "timeseries_distance")
@@ -229,165 +232,206 @@ for subset_label in ["all","target","non_target"]:
 print("✅ 全図保存完了:", out_dir)
 
 #%% ====== 完全修正版：全体・対象・非対象リンクの3指標を縦長1枚で可視化 ======
-# import seaborn as sns
-# import matplotlib.pyplot as plt
-# import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
 
-# print("📊 修正版：全体・対象リンク・非対象リンクの比較図を作成中...")
+print("📊 修正版：全体・対象リンク・非対象リンクの比較図を作成中...")
 
-# # --- no01を基準に相対化（subset単位で） ---
-# base_df = records_df[records_df["scenario"] == "no01"].groupby("subset").mean(numeric_only=True)
-# records_df = records_df.copy()
-# records_df["TTT_rel"] = records_df.apply(
-#     lambda r: r["TTT"] / base_df.loc[r["subset"], "TTT"], axis=1)
-# records_df["dist_kmveh_rel"] = records_df.apply(
-#     lambda r: r["dist_kmveh"] / base_df.loc[r["subset"], "dist_kmveh"], axis=1)
+#--- no01を基準に相対化（subset単位で） ---
+base_df = records_df[records_df["scenario"] == "no01"].groupby("subset").mean(numeric_only=True)
+records_df = records_df.copy()
+records_df["TTT_rel"] = records_df.apply(
+    lambda r: r["TTT"] / base_df.loc[r["subset"], "TTT"], axis=1)
+records_df["dist_kmveh_rel"] = records_df.apply(
+    lambda r: r["dist_kmveh"] / base_df.loc[r["subset"], "dist_kmveh"], axis=1)
 
-# # --- 設定 ---
-# colors = {"all": "tab:blue", "target": "tab:red", "non_target": "tab:gray"}
-# order = sorted(records_df["scenario"].unique())
-# subsets = ["all", "target", "non_target"]
-# metrics = [
-#     ("V_net", "平均速度 [km/h]", False),
-#     ("TTT_rel", "総旅行時間 [no01比]", True),
-#     ("dist_kmveh_rel", "総走行距離 [no01比]", True)
-# ]
+# --- 設定 ---
+colors = {"all": "tab:blue", "target": "tab:red", "non_target": "tab:gray"}
+order = sorted(records_df["scenario"].unique())
+subsets = ["all", "target", "non_target"]
+metrics = [
+    ("V_net", "平均速度 [km/h]", False),
+    ("TTT_rel", "総旅行時間 [no01比]", True),
+    ("dist_kmveh_rel", "総走行距離 [no01比]", True)
+]
 
-# fig, axes = plt.subplots(3, 1, figsize=(10, 14), sharex=True)
+fig, axes = plt.subplots(3, 1, figsize=(10, 14), sharex=True)
 
-# # --- プロット ---
-# for ax, (col, label, rel) in zip(axes, metrics):
-#     width = 0.25
-#     spacing = 0.25  # 横方向のずらし幅
-#     for i, subset in enumerate(subsets):
-#         subdf = records_df[records_df["subset"] == subset]
-#         if subdf.empty:
-#             continue
-#         x_positions = np.arange(len(order)) + (i - 1) * spacing
-#         data = [subdf.loc[subdf["scenario"] == s, col].dropna() for s in order]
-#         bp = ax.boxplot(
-#             data,
-#             positions=x_positions,
-#             widths=width,
-#             patch_artist=True,
-#             boxprops=dict(facecolor=colors[subset], alpha=0.7),
-#             medianprops=dict(color="black", linewidth=1.5),
-#             whiskerprops=dict(color="black"),
-#             capprops=dict(color="black"),
-#             flierprops=dict(marker="o", markersize=2, color="gray", alpha=0.5),
-#         )
-#     ax.set_xticks(np.arange(len(order)))
-#     ax.set_xticklabels(order, rotation=0)
-#     ax.set_ylabel(label, fontproperties=prop)
-#     ax.grid(True, axis="y", alpha=0.3)
-#     if rel:
-#         ax.axhline(1.0, color="black", linestyle="--", linewidth=1)
-#     for tick in ax.get_xticklabels() + ax.get_yticklabels():
-#         tick.set_fontsize(11)
+# --- プロット ---
+for ax, (col, label, rel) in zip(axes, metrics):
+    width = 0.25
+    spacing = 0.25  # 横方向のずらし幅
+    for i, subset in enumerate(subsets):
+        subdf = records_df[records_df["subset"] == subset]
+        if subdf.empty:
+            continue
+        x_positions = np.arange(len(order)) + (i - 1) * spacing
+        data = [subdf.loc[subdf["scenario"] == s, col].dropna() for s in order]
+        bp = ax.boxplot(
+            data,
+            positions=x_positions,
+            widths=width,
+            patch_artist=True,
+            boxprops=dict(facecolor=colors[subset], alpha=0.7),
+            medianprops=dict(color="black", linewidth=1.5),
+            whiskerprops=dict(color="black"),
+            capprops=dict(color="black"),
+            flierprops=dict(marker="o", markersize=2, color="gray", alpha=0.5),
+        )
+    ax.set_xticks(np.arange(len(order)))
+    ax.set_xticklabels(order, rotation=0)
+    ax.set_ylabel(label, fontproperties=prop)
+    ax.grid(True, axis="y", alpha=0.3)
+    if rel:
+        ax.axhline(1.0, color="black", linestyle="--", linewidth=1)
+    for tick in ax.get_xticklabels() + ax.get_yticklabels():
+        tick.set_fontsize(11)
 
-# axes[-1].set_xlabel("シナリオ", fontproperties=prop)
+axes[-1].set_xlabel("シナリオ", fontproperties=prop)
 
-# # --- 凡例を上部に一括表示 ---
-# handles = [
-#     plt.Line2D([0], [0], color=colors["all"], lw=8, label="全体"),
-#     plt.Line2D([0], [0], color=colors["target"], lw=8, label="対象リンクのみ"),
-#     plt.Line2D([0], [0], color=colors["non_target"], lw=8, label="対象外リンクのみ")
-# ]
-# fig.legend(handles=handles, loc="upper center", ncol=3, fontsize=11, frameon=False)
+# --- 凡例を上部に一括表示 ---
+handles = [
+    plt.Line2D([0], [0], color=colors["all"], lw=8, label="全体"),
+    plt.Line2D([0], [0], color=colors["target"], lw=8, label="対象リンクのみ"),
+    plt.Line2D([0], [0], color=colors["non_target"], lw=8, label="対象外リンクのみ")
+]
+fig.legend(handles=handles, loc="upper center", ncol=3, fontsize=11, frameon=False)
 
-# fig.suptitle("全体・対象リンク・非対象リンクにおける各指標の比較", fontproperties=prop, fontsize=14)
-# plt.tight_layout(rect=[0, 0, 1, 0.95])
-# save_path = out_dir / "boxplot_combined_vertical.png"
-# fig.savefig(save_path, dpi=300)
-# plt.close()
+fig.suptitle("全体・対象リンク・非対象リンクにおける各指標の比較", fontproperties=prop, fontsize=14)
+plt.tight_layout(rect=[0, 0, 1, 0.95])
+save_path = out_dir / "boxplot_combined_vertical.png"
+fig.savefig(save_path, dpi=300)
+plt.close()
 
-# print(f"✅ 縦長1枚の箱ひげ図を保存しました: {save_path}")
+print(f"✅ 縦長1枚の箱ひげ図を保存しました: {save_path}")
 
-#%% ====== 図1：交通全体の傾向（絶対値ver） ======
-print("📊 図1：交通全体（絶対値ver）を描画中...")
+#%% ====== 図1：交通全体（絶対値ver・タイトルのみ） ======
+print("📊 図1：交通全体（タイトルのみ）を描画中...")
 
 records_all = records_df[records_df["subset"] == "all"].copy()
+if records_all.empty:
+    raise ValueError("subset='all' のデータが見つかりません。")
+
 metrics = [
-    ("V_net", "平均速度 [km/h]", (22, 28)),
-    ("TTT", "総旅行時間 [sec]", (6.0e7, 1.2e8)),
-    ("dist_kmveh", "総走行距離 [台・km]", (1.2e5, 1.7e5))
+    ("V_net", "平均速度 [km/h]", None),
+    ("TTT", "総旅行時間 [sec]", None),
+    ("dist_kmveh", "総走行距離 [台・km]", None)
 ]
 order = sorted(records_all["scenario"].unique())
 
 fig, axes = plt.subplots(3, 1, figsize=(10, 14), sharex=True)
+
 for ax, (col, label, ylim) in zip(axes, metrics):
     sns.boxplot(
-        data=records_all, x="scenario", y=col,
-        order=order, color="tab:blue", width=0.5,
+        data=records_all,
+        x="scenario", y=col, order=order,
+        color="tab:blue", width=0.5,
         boxprops={"alpha": 0.8},
-        showfliers=True,  # 外れ値表示
+        showfliers=True,
         flierprops={"marker": "o", "markersize": 3, "alpha": 0.4},
         ax=ax
     )
     ax.set_ylabel(label, fontproperties=prop)
-    ax.set_ylim(*ylim)
+    if ylim: ax.set_ylim(*ylim)
     ax.grid(True, axis="y", alpha=0.3)
-    for t in ax.get_yticklabels():
-        t.set_fontsize(11)
-axes[-1].set_xlabel("シナリオ", fontproperties=prop, fontsize=12)
-fig.suptitle("交通全体における各指標の比較（絶対値）", fontproperties=prop, fontsize=14)
-plt.tight_layout(rect=[0, 0, 1, 0.96])
-save_path1 = out_dir / "boxplot_all_absolute_vertical.png"
+    for t in ax.get_yticklabels(): t.set_fontsize(10)
+axes[-1].set_xlabel("シナリオ", fontproperties=prop)
+
+# === タイトルのみ ===
+axes[0].text(
+    0.5, 1.1, "ネットワーク全体における各指標の比較",
+    ha="center", va="bottom", transform=axes[0].transAxes,
+    fontproperties=prop, fontsize=14
+)
+
+plt.tight_layout(rect=[0, 0, 1, 0.95])
+save_path1 = out_dir / "boxplot_all_absolute_inaxis_nolegend.png"
 fig.savefig(save_path1, dpi=300)
 plt.close()
 print(f"✅ 図1保存: {save_path1}")
 
 
-#%% ====== 図2：対象リンク vs 非対象リンク（横ずらし＋外れ値透過） ======
-print("📊 図2：対象リンク vs 非対象リンク（横ずらし）を描画中...")
 
-records_sub = records_df[records_df["subset"].isin(["target", "non_target"])].copy()
-metrics = [
-    ("V_net", "平均速度 [km/h]", (22, 28)),
-    ("TTT_rel", "総旅行時間 [no01比]", (0.95, 1.15)),
-    ("dist_kmveh_rel", "総走行距離 [no01比]", (0.97, 1.01))
-]
+#%% ====== 図2：対象リンク vs 非対象リンク（タイトル＆凡例を図内に配置） ======
+print("📊 図2：タイトルと凡例を図内に配置して再描画...")
+
+# --- 相対値を生成（no01比） ---
+if "TTT_rel" not in records_df.columns:
+    base_df = records_df[records_df["scenario"] == "no01"].groupby("subset").mean(numeric_only=True)
+    records_df["TTT_rel"] = records_df.apply(
+        lambda r: r["TTT"] / base_df.loc[r["subset"], "TTT"], axis=1)
+    records_df["dist_kmveh_rel"] = records_df.apply(
+        lambda r: r["dist_kmveh"] / base_df.loc[r["subset"], "dist_kmveh"], axis=1)
+
+order = sorted(records_df["scenario"].unique())
+subsets = ["target", "non_target"]
 colors = {"target": "tab:red", "non_target": "tab:gray"}
-offsets = {"target": -0.2, "non_target": 0.2}
-order = sorted(records_sub["scenario"].unique())
+
+metrics = [
+    ("V_net", "平均速度 [km/h]", False),
+    ("TTT_rel", "総旅行時間 [no01比]", True),
+    ("dist_kmveh_rel", "総走行距離 [no01比]", True)
+]
 
 fig, axes = plt.subplots(3, 1, figsize=(10, 14), sharex=True)
-width = 0.35
 
-for ax, (col, label, ylim) in zip(axes, metrics):
-    for subset, color in colors.items():
-        data = records_sub[records_sub["subset"] == subset].copy()
-        pos = np.arange(len(order))
-        sns.boxplot(
-            data=data, x="scenario", y=col,
-            order=order, color=color, width=width,
-            boxprops={"alpha": 0.7},
-            showfliers=True,
-            flierprops={"marker": "o", "markersize": 3, "alpha": 0.4},
-            ax=ax
+for ax, (col, label, rel) in zip(axes, metrics):
+    width = 0.25
+    spacing = 0.25
+    for i, subset in enumerate(subsets):
+        subdf = records_df[records_df["subset"] == subset]
+        if subdf.empty:
+            continue
+        x_positions = np.arange(len(order)) + (i - 0.5) * spacing
+        data = [subdf.loc[subdf["scenario"] == s, col].dropna() for s in order]
+        ax.boxplot(
+            data,
+            positions=x_positions,
+            widths=width,
+            patch_artist=True,
+            boxprops=dict(facecolor=colors[subset], alpha=0.7),
+            medianprops=dict(color="black", linewidth=1.2),
+            whiskerprops=dict(color="black", linewidth=0.8),
+            capprops=dict(color="black", linewidth=0.8),
+            flierprops=dict(marker="o", markersize=2, color="gray", alpha=0.5),
         )
+    ax.set_xticks(np.arange(len(order)))
+    ax.set_xticklabels(order)
     ax.set_ylabel(label, fontproperties=prop)
-    ax.set_ylim(*ylim)
-    if "rel" in col:
-        ax.axhline(1.0, color="black", linestyle="--", linewidth=1)
     ax.grid(True, axis="y", alpha=0.3)
-    for t in ax.get_yticklabels():
-        t.set_fontsize(11)
-axes[-1].set_xlabel("シナリオ", fontproperties=prop, fontsize=12)
+    if rel:
+        ax.axhline(1.0, color="black", linestyle="--", linewidth=1)
+    for tick in ax.get_xticklabels() + ax.get_yticklabels():
+        tick.set_fontsize(11)
+
+axes[-1].set_xlabel("シナリオ", fontproperties=prop)
+
+#=== タイトルと凡例（タイトルを下げ、凡例は固定） ===
+axes[0].text(
+    0.5, 1.10,  # ← ここを 1.18 → 1.12 に変更（下げる）
+    "対象リンクと非対象リンクにおける各指標の比較",
+    ha="center", va="bottom", transform=axes[0].transAxes,
+    fontproperties=prop, fontsize=14
+)
 
 handles = [
     plt.Line2D([0], [0], color=colors["target"], lw=8, label="対象リンクのみ"),
     plt.Line2D([0], [0], color=colors["non_target"], lw=8, label="対象外リンクのみ")
 ]
-fig.legend(handles=handles, loc="upper center", ncol=2, fontsize=11, frameon=False)
-fig.suptitle("対象リンクと非対象リンクにおける各指標の比較（横ずらし）", fontproperties=prop, fontsize=14)
+axes[0].legend(
+    handles=handles,
+    loc="upper center",
+    bbox_to_anchor=(0.5, 1.09),  # ← 1.07 → 1.06 に微調整してタイトルのすぐ上
+    ncol=2,
+    frameon=False,
+    fontsize=11
+)
+
+
 plt.tight_layout(rect=[0, 0, 1, 0.95])
-save_path2 = out_dir / "boxplot_target_vs_nontarget_offset.png"
+save_path2 = out_dir / "boxplot_target_vs_nontarget_inaxis.png"
 fig.savefig(save_path2, dpi=300)
 plt.close()
 print(f"✅ 図2保存: {save_path2}")
-
-
-
-
 

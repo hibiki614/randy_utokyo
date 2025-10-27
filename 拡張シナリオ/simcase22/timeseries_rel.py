@@ -75,47 +75,61 @@ cols_save = ["scenario","timestr","slot_code","HHMM",
 df[cols_save].to_csv(rel_csv, index=False, encoding="utf-8-sig")
 print(f"✅ 相対CSVを書き出し: {rel_csv}")
 
-# ====== x軸設定 ======
-time_master = (df[["slot_code","HHMM"]]
-               .drop_duplicates()
-               .sort_values("slot_code"))
+# ====== 30分刻みのマスター時間軸 ======
+hhmm_list = [f"{h:02d}{m:02d}" for h in range(7, 19) for m in (0, 30)]  # 0700～1830
+time_master = pd.DataFrame({
+    "slot_code": hhmm_list,
+    "HHMM": [f"{h[:2]}:{h[2:]}" for h in hhmm_list]
+})
 pos_map = {sc: i for i, sc in enumerate(time_master["slot_code"])}
 
-def make_ticks(master, target=12):
-    n = len(master)
-    if n == 0:
-        return np.array([]), []
-    step = max(1, int(np.ceil(n / target)))
-    idx = np.arange(0, n, step)
-    if idx[-1] != n-1:
-        idx = np.r_[idx, n-1]
-    labels = master["HHMM"].iloc[idx].tolist()
-    return idx, labels
-
-# ====== プロット関数 ======
-def plot_rel(metric_col, ylabel, filename, target_ticks=12):
+# ====== プロット関数（データ15分・ラベル30分） ======
+def plot_rel(metric_col, ylabel, filename):
     plt.figure(figsize=(14,6))
+
+    # まず全スロットを取得（例：0700, 0715, 0730, ...）
+    all_slots = sorted(df["slot_code"].astype(str).str.zfill(4).unique())
+    pos_map = {sc: i for i, sc in enumerate(all_slots)}
+
     for scen in sorted(df["scenario"].unique()):
-        sub = df[df["scenario"] == scen].copy().sort_values("slot_code")
-        x = sub["slot_code"].map(pos_map).values
+        sub = df[df["scenario"] == scen].copy()
+        sub["slot_code_str"] = sub["slot_code"].astype(str).str.zfill(4)
+        sub = sub[sub["slot_code_str"].isin(all_slots)].sort_values("slot_code_str")
+
+        if sub.empty:
+            print(f"⚠ {scen}: データが空です")
+            continue
+
+        x = sub["slot_code_str"].map(pos_map)
         y = sub[metric_col].values
         plt.plot(x, y, label=scen)
-    ticks, labs = make_ticks(time_master, target=target_ticks)
-    plt.xticks(ticks, labs, rotation=0)
+
+    # --- 目盛りだけ30分刻みにする ---
+    tick_slots = [s for s in all_slots if s.endswith("00") or s.endswith("30")]
+    tick_labels = [f"{s[:2]}:{s[2:]}" for s in tick_slots]
+    xticks = [pos_map[s] for s in tick_slots if s in pos_map]
+
+    plt.xticks(xticks, tick_labels, rotation=45)
+    plt.xlim(0, len(all_slots)-1)
+
+    # --- 装飾 ---
     plt.xlabel("時刻（HH:MM）")
     plt.ylim(0.8, 1.2)
     yticks = np.arange(0.8, 1.2001, 0.05)
     plt.yticks(yticks, [f"{t:.2f}" for t in yticks])
     plt.axhline(1.0, color="gray", linewidth=1, linestyle="--", zorder=0)
     plt.ylabel(ylabel + "（no01=1.0）")
-    plt.title(f"時間別 {ylabel} の相対値（0.8〜1.2表示）")
+    plt.title(f"時間別 {ylabel} の相対値（15分データ・30分刻み表示, 0.8〜1.2表示）")
     plt.legend(ncol=2)
     plt.tight_layout()
     plt.savefig(out_dir / filename, dpi=300)
     plt.close()
     print(f"🖼 画像保存: {out_dir / filename}")
 
+
+
 # ====== 出力（3指標） ======
-plot_rel("V_net_rel", "平均速度",  "timeseries_speed_rel.png", target_ticks=14)
-plot_rel("TTT_rel",   "TTT",      "timeseries_ttt_rel.png",   target_ticks=14)
-plot_rel("flow_rel",  "総走行距離", "timeseries_dist_rel.png", target_ticks=14)
+plot_rel("V_net_rel", "平均速度",  "timeseries_speed_rel.png")
+plot_rel("TTT_rel",   "TTT",      "timeseries_ttt_rel.png")
+plot_rel("flow_rel",  "総走行距離", "timeseries_dist_rel.png")
+
