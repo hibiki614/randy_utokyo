@@ -10,7 +10,7 @@ from pathlib import Path
 import glob, os, re
 
 # ===== 設定 =====
-base_dir = Path(r"C:/Users/OguchiLab/OneDrive/デスクトップ/randy_utokyo/拡張シナリオ/simcase22")
+base_dir = Path(r"C:/Users/hibik/github/randy_utokyo/拡張シナリオ/simcase22")
 out_dir  = base_dir / "analysis"
 out_dir.mkdir(exist_ok=True)
 
@@ -127,23 +127,76 @@ plt.tight_layout()
 fig.savefig(out_dir / f"timeseries_bus_nonbus_{SCENARIO}_hourly.png", dpi=300)
 plt.close()
 
-# --- バス台数＋バス割合（右軸） ---
-fig, ax1 = plt.subplots(figsize=(11,5))
-ax1.plot(summary["HHMM"], summary["bus_mean"], label="Bus台数", color="tab:blue", linewidth=2)
-ax1.plot(summary["HHMM"], summary["nonbus_mean"], label="Non-Bus台数", color="tab:orange", linestyle="--", linewidth=2)
-ax1.set_ylabel("台数 [台/15分]")
-ax1.tick_params(axis='y', labelcolor="black")
+# --- バス台数＋バス割合（凡例をx軸ラベル横に表示） ---
+import matplotlib.font_manager as fm
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.ticker import MultipleLocator
+
+# ===== フォント設定 =====
+font_path = r"C:\Windows\Fonts\meiryo.ttc"
+prop = fm.FontProperties(fname=font_path)
+plt.rcParams["font.family"] = prop.get_name()
+plt.rcParams["axes.unicode_minus"] = False
+
+# ===== 図をやや縦長にして見やすく =====
+fig, ax1 = plt.subplots(figsize=(11, 6))
+
+# --- 左軸：バス・非バス台数 ---
+l1, = ax1.plot(summary["HHMM"], summary["bus_mean"], label="Bus台数",
+               color="tab:blue", linewidth=3.0)
+l2, = ax1.plot(summary["HHMM"], summary["nonbus_mean"], label="Non-Bus台数",
+               color="tab:orange", linestyle="--", linewidth=3.0)
+ax1.set_ylabel("台数 [台/15分]", fontproperties=prop, fontsize=30)
+ax1.tick_params(axis="y", labelcolor="black", labelsize=14)
+from matplotlib.ticker import MultipleLocator, MaxNLocator
+
+
+
+# --- 縦軸スケール調整 ---
+ymax = np.nanmax([summary["bus_mean"].max(), summary["nonbus_mean"].max()])
+ax1.set_ylim(0, ymax * 1.15)
+# または、明示的に間隔を指定したいなら：
+ax1.yaxis.set_major_locator(MultipleLocator(2000))  # ← 10刻みなど
+
+# --- 右軸：バス割合 ---
 ax2 = ax1.twinx()
-ax2.plot(summary["HHMM"], summary["bus_ratio_pct"], label="バス割合", color="tab:green", marker="o")
-ax2.set_ylabel("バス割合 [%]")
-ax2.tick_params(axis='y', labelcolor="black")
-ax1.set_title(f"{SCENARIO}：車種別台数とバス割合（乱数平均）")
+l3, = ax2.plot(summary["HHMM"], summary["bus_ratio_pct"], label="バス割合",
+               color="tab:green", marker="o", markersize=6, linewidth=2.4)
+ax2.set_ylabel("バス割合 [%]", fontproperties=prop, fontsize=30)
+ax2.tick_params(axis="y", labelcolor="black", labelsize=14)
+
+# --- 横軸 ---
 hour_idx = np.arange(0, len(summary), 4)
-ax1.set_xticks(hour_idx, summary["HHMM"].iloc[::4], rotation=0)
-ax1.grid(True, axis="x", alpha=0.3)
-fig.legend(loc="upper left", bbox_to_anchor=(0.1,0.95))
-plt.tight_layout()
+ax1.set_xticks(hour_idx)
+ax1.set_xticklabels(summary["HHMM"].iloc[::4], fontproperties=prop, fontsize=14)
+ax1.set_xlabel("時刻", fontproperties=prop, fontsize=30)
+
+# --- グリッド（横線のみ） ---
+ax1.grid(True, axis="y", which="major", alpha=0.4)
+ax2.grid(False)
+
+# --- 凡例（枠外・x軸ラベル右隣に一列で表示） ---
+lines = [l1, l2, l3]
+labels = [line.get_label() for line in lines]
+
+legend_font = fm.FontProperties(fname=font_path, size=15)
+fig.legend(
+    lines, labels,
+    loc="lower center",
+    bbox_to_anchor=(0.50, -0.1),
+    ncol=3,
+    frameon=False,
+    prop=legend_font  # ← fontsize は削除！
+)
+
+
+#plt.tight_layout(rect=[0, 0, 0.95, 1])  # ← 右に凡例のスペースを確保
 combo_fig = out_dir / f"timeseries_bus_and_ratio_{SCENARIO}.png"
-fig.savefig(combo_fig, dpi=300)
+fig.savefig(combo_fig, dpi=300, bbox_inches="tight")
 plt.close()
-print(" -", combo_fig)
+
+print("✅ 凡例を『時刻』ラベル横に枠外配置して保存完了:", combo_fig)
+
+
+

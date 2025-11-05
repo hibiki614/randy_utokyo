@@ -11,7 +11,7 @@ from pathlib import Path
 import glob, os, re
 
 # ====== 設定 ======
-base_dir = Path(r"C:/Users/OguchiLab/OneDrive/デスクトップ/randy_utokyo/拡張シナリオ/simcase22")
+base_dir = Path(r"C:/Users/hibik/github/randy_utokyo/拡張シナリオ/simcase22")
 out_dir = base_dir / "analysis"
 out_dir.mkdir(exist_ok=True)
 
@@ -353,8 +353,23 @@ print(f"✅ 図1保存: {save_path1}")
 
 
 
-#%% ====== 図2：対象リンク vs 非対象リンク（タイトル＆凡例を図内に配置） ======
-print("📊 図2：タイトルと凡例を図内に配置して再描画...")
+#%% ====== 図2：対象リンク vs 非対象リンク（タイトル＆凡例削除＋シナリオ名変更＋文字大） ======
+print("📊 図2：タイトル・凡例調整＆シナリオ名変更版を描画中...")
+
+# --- シナリオ名マッピング ---
+scenario_labels = {
+    "no01": "MV-×",
+    "no02": "MV-〇",
+    "no03": "1.0AV-×",
+    "no04": "1.0AV-〇",
+    "no05": "0.7AV-×",
+    "no06": "0.7AV-〇",
+    "no07": "0.5AV-×",
+    "no08": "0.5AV-〇",
+}
+
+records_df["scenario_label"] = records_df["scenario"].map(scenario_labels)
+order = [scenario_labels[k] for k in sorted(scenario_labels.keys())]
 
 # --- 相対値を生成（no01比） ---
 if "TTT_rel" not in records_df.columns:
@@ -364,18 +379,17 @@ if "TTT_rel" not in records_df.columns:
     records_df["dist_kmveh_rel"] = records_df.apply(
         lambda r: r["dist_kmveh"] / base_df.loc[r["subset"], "dist_kmveh"], axis=1)
 
-order = sorted(records_df["scenario"].unique())
 subsets = ["target", "non_target"]
 colors = {"target": "tab:red", "non_target": "tab:gray"}
-
 metrics = [
     ("V_net", "平均速度 [km/h]", False),
     ("TTT_rel", "総旅行時間 [no01比]", True),
     ("dist_kmveh_rel", "総走行距離 [no01比]", True)
 ]
 
-fig, axes = plt.subplots(3, 1, figsize=(10, 14), sharex=True)
+fig, axes = plt.subplots(3, 1, figsize=(12, 16), sharex=True)
 
+# --- プロット ---
 for ax, (col, label, rel) in zip(axes, metrics):
     width = 0.25
     spacing = 0.25
@@ -384,54 +398,40 @@ for ax, (col, label, rel) in zip(axes, metrics):
         if subdf.empty:
             continue
         x_positions = np.arange(len(order)) + (i - 0.5) * spacing
-        data = [subdf.loc[subdf["scenario"] == s, col].dropna() for s in order]
+        data = [subdf.loc[subdf["scenario_label"] == s, col].dropna() for s in order]
         ax.boxplot(
             data,
             positions=x_positions,
             widths=width,
             patch_artist=True,
             boxprops=dict(facecolor=colors[subset], alpha=0.7),
-            medianprops=dict(color="black", linewidth=1.2),
-            whiskerprops=dict(color="black", linewidth=0.8),
-            capprops=dict(color="black", linewidth=0.8),
-            flierprops=dict(marker="o", markersize=2, color="gray", alpha=0.5),
+            medianprops=dict(color="black", linewidth=1.5),
+            whiskerprops=dict(color="black", linewidth=1.0),
+            capprops=dict(color="black", linewidth=1.0),
+            flierprops=dict(marker="o", markersize=3, color="gray", alpha=0.5),
         )
+
     ax.set_xticks(np.arange(len(order)))
-    ax.set_xticklabels(order)
-    ax.set_ylabel(label, fontproperties=prop)
+    ax.set_xticklabels(order, fontsize=13)
+    ax.set_ylabel(label, fontproperties=prop, fontsize=14)
     ax.grid(True, axis="y", alpha=0.3)
     if rel:
-        ax.axhline(1.0, color="black", linestyle="--", linewidth=1)
-    for tick in ax.get_xticklabels() + ax.get_yticklabels():
-        tick.set_fontsize(11)
+        ax.axhline(1.0, color="black", linestyle="--", linewidth=1.0)
+    for tick in ax.get_yticklabels():
+        tick.set_fontsize(12)
 
-axes[-1].set_xlabel("シナリオ", fontproperties=prop)
+axes[-1].set_xlabel("シナリオ", fontproperties=prop, fontsize=14)
 
-#=== タイトルと凡例（タイトルを下げ、凡例は固定） ===
+# === タイトルのみ ===
 axes[0].text(
-    0.5, 1.10,  # ← ここを 1.18 → 1.12 に変更（下げる）
+    0.5, 1.12,
     "対象リンクと非対象リンクにおける各指標の比較",
     ha="center", va="bottom", transform=axes[0].transAxes,
-    fontproperties=prop, fontsize=14
+    fontproperties=prop, fontsize=17
 )
-
-handles = [
-    plt.Line2D([0], [0], color=colors["target"], lw=8, label="対象リンクのみ"),
-    plt.Line2D([0], [0], color=colors["non_target"], lw=8, label="対象外リンクのみ")
-]
-axes[0].legend(
-    handles=handles,
-    loc="upper center",
-    bbox_to_anchor=(0.5, 1.09),  # ← 1.07 → 1.06 に微調整してタイトルのすぐ上
-    ncol=2,
-    frameon=False,
-    fontsize=11
-)
-
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])
-save_path2 = out_dir / "boxplot_target_vs_nontarget_inaxis.png"
+save_path2 = out_dir / "boxplot_target_vs_nontarget_inaxis_largefont_nolegend.png"
 fig.savefig(save_path2, dpi=300)
 plt.close()
-print(f"✅ 図2保存: {save_path2}")
-
+print(f"✅ 図2保存（大文字＆凡例削除＆シナリオ名変更版）: {save_path2}")
