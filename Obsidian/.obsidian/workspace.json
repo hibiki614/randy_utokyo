@@ -27,16 +27,58 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/就活/JR東海座談会対策.md",
+                "file": "Projects/lecture/風の谷11章.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JR東海座談会対策"
+              "title": "風の谷11章"
+            }
+          },
+          {
+            "id": "654c469f6c676b2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/Instr/Labseminar.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Labseminar"
+            }
+          },
+          {
+            "id": "db60cd11775cbe38",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/lecture/風の谷p653-p752読む.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "風の谷p653-p752読む"
+            }
+          },
+          {
+            "id": "6fd22fc36cc9bcf0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "一旦整理しよ(就活は毎日やれ).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "一旦整理しよ(就活は毎日やれ)"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -113,7 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 417.5
   },
   "right": {
     "id": "c6fed314183559d7",
@@ -207,36 +249,37 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c320ed7927029473",
+  "active": "6fd22fc36cc9bcf0",
   "lastOpenFiles": [
-    "Projects/就活/就活.md",
-    "Projects/就活/JR東海座談会対策.md",
-    "講義メモ/先進モビリティ政策/第7回.md",
-    "Projects/lecture/風の谷第9章読む.md",
-    "Projects/lecture/Lecture.md",
-    "Projects/講義/講義.md",
-    "Projects/HALCC/10周年記念イベント.md",
-    "Projects/ITS symposium/ITSシンポジウム.md",
-    "講義メモ/先進モビリティ政策/第四回.md",
-    "講義メモ/Untitled.md",
-    "Projects/lecture",
-    "Projects/デザスタ/デザスタ.md",
-    "Periodic/Daily/2025-11-16.md",
-    "task_sample.md",
-    "Periodic/Daily/2025-11-14.md",
-    "Projects/講義",
-    "Projects/ささいなやつ/その他.md",
+    "Projects/lecture/風の谷p653-p752読む.md",
+    "一旦整理しよ(就活は毎日やれ).md",
     "Dashboards/All_tasks.md",
-    "Periodic/Monthly/2025-11.md",
-    "Periodic/Daily/2025-11-12.md",
-    "Projects/就活/JR東海ES.md",
-    "Projects/ITS symposium/生産研究.md",
-    "Projects/ITS symposium/ショットガン作成.md",
-    "Untitled 1.md",
-    "Periodic/Daily/2025-11-09.md",
+    "Projects/ITS symposium/ITSシンポジウム.md",
     "Templates/project_overview.md",
-    "Periodic/Daily/2025-11-08.md",
-    "2025-11-08.md",
+    "Projects/デザスタ/デザスタ.md",
+    "Projects/Instr/INSTR.md",
+    "Projects/lecture/Lecture.md",
+    "Periodic/Daily/2025-11-30.md",
+    "Periodic/Daily/2025-11-29.md",
+    "Projects/デザスタ/WS内容第一稿松永さんに投げる.md",
+    "Projects/Instr/信号制御の基礎.md",
+    "Projects/ITS symposium/ショットガン作成.md",
+    "自動車と自転車双方を考慮した交通信号系統制御に関する研究.md",
+    "Projects/Instr/ORの信号制御論文.md",
+    "Projects/Instr/Somporn's thesis.md",
+    "Projects/Instr/Labseminar.md",
+    "国交省.md",
+    "Projects/lecture/風の谷10章.md",
+    "Periodic/Daily/2025-11-27.md",
+    "Projects/lecture/風の谷11章.md",
+    "Projects/lecture/風の谷第9章読む.md",
+    "和田健太郎のグリーンウェーブ.md",
+    "Projects/Instr/大口先生mtg資料.md",
+    "交通流影響評価/既往研究.md",
+    "交通流影響評価/疑問リスト.md",
+    "Projects/Instr",
+    "Projects/lecture",
+    "Projects/講義",
     "Projects/HALCC",
     "Projects/ささいなやつ",
     "Projects/デザスタ",
@@ -244,7 +287,6 @@
     "Projects/ITS symposium",
     "Periodic/Monthly",
     "Periodic/Weekly",
-    "Periodic/Daily",
     "理論勉強/fig/sandh.png",
     "理論勉強/fig/kv.jpg",
     "理論勉強/fig/kq.jpg",
