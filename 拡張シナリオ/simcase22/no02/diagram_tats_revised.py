@@ -12,9 +12,9 @@ from datetime import datetime, timedelta
 import numpy as np
 
 # ===== ファイル設定 =====
-record_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no07\\vpos_no07_r01_ext.csv"
-volspd_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no07\\rand01\\Case1_no07_r01_volspd.csv"
-auto_type = "I_09_1204235410499"
+record_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no02\\vpos_no02_r06_ext.csv"
+volspd_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no02\\rand06\\Case1_no02_r06_volspd.csv"
+auto_type = "I_09_1204235410434"
 
 
 # ===== Shuttleルートリンク =====
@@ -79,7 +79,8 @@ def make_timespace(df, links, direction_name, outfile_prefix):
         fig, ax = plt.subplots(figsize=(14, 9), dpi=200)
         for vid, g in df_hour.groupby("VID"):
             g = g.sort_values("SimTime")
-            color = "red" if g["Type"].iloc[0] == auto_type else "gray"
+            # 自動運転車を青、それ以外をグレーに
+            color = "blue" if g["Type"].iloc[0] == auto_type else "gray"
             ax.plot(
                 g["SimTime"] / 60,  # 分単位
                 g["Ypos"],
@@ -87,6 +88,7 @@ def make_timespace(df, links, direction_name, outfile_prefix):
                 lw=0.8 if color == "gray" else 1.6,
                 alpha=0.35 if color == "gray" else 0.9,
             )
+
 
         # === リンク境界線と番号 ===
         for i, lid in enumerate(links):

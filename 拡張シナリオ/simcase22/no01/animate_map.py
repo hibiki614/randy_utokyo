@@ -15,8 +15,8 @@ def select_file(s=''):
     return [distinct[i] for i in range(int(input('From = ')),int(input('To = '))+1)]
 
 def type_color_weight(type):
-	if type=='I_09_1204235410499':
-		return ('red',5)
+	if type=='I_09_1204235410434':
+		return ('blue',5)
 	return ('black',3)
 
 def animated_vehicles(name):

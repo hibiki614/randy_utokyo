@@ -12,8 +12,8 @@ from datetime import datetime, timedelta
 import numpy as np
 
 # ===== ファイル設定 =====
-record_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no07\\vpos_no07_r01_ext.csv"
-volspd_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no07\\rand01\\Case1_no07_r01_volspd.csv"
+record_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no08\\vpos_no08_r06_ext.csv"
+volspd_path = "C:\\Users\\OguchiLab\\OneDrive\\デスクトップ\\randy_utokyo\\拡張シナリオ\\simcase22\\no08\\rand06\\Case1_no08_r06_volspd.csv"
 auto_type = "I_09_1204235410499"
 
 

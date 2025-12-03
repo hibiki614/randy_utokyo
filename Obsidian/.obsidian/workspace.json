@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "730f4740ba3fb4df",
+    "id": "f408b6b1d5a6a442",
     "type": "split",
     "children": [
       {
-        "id": "ad10d3f8e97a401f",
+        "id": "94be8ddb5cc28088",
         "type": "tabs",
         "children": [
           {
-            "id": "742a88b5a7a93296",
+            "id": "ef90de93fefbdc44",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,79 +20,22 @@
               "icon": "lucide-file",
               "title": "ITSシンポジウム"
             }
-          },
-          {
-            "id": "c320ed7927029473",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/lecture/風の谷11章.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "風の谷11章"
-            }
-          },
-          {
-            "id": "654c469f6c676b2d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/Instr/Labseminar.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Labseminar"
-            }
-          },
-          {
-            "id": "db60cd11775cbe38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/lecture/風の谷p653-p752読む.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "風の谷p653-p752読む"
-            }
-          },
-          {
-            "id": "6fd22fc36cc9bcf0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "一旦整理しよ(就活は毎日やれ).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "一旦整理しよ(就活は毎日やれ)"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "409e0fcec8944c31",
+    "id": "bfecb48c87f708e3",
     "type": "split",
     "children": [
       {
-        "id": "a8186fa6597ecdd6",
+        "id": "6579aaae4ff6e425",
         "type": "tabs",
         "children": [
           {
-            "id": "9c478f7bfa2e1c99",
+            "id": "05edbf01c673863c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -105,7 +48,7 @@
             }
           },
           {
-            "id": "fcca2dff54bc4a54",
+            "id": "8cbe0b92a089043c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -122,7 +65,7 @@
             }
           },
           {
-            "id": "eca1f3bebd33352b",
+            "id": "d0453fdc9d37e42b",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -130,48 +73,28 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "10a35a27138b6798",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "c6d405c88ef62622",
-            "type": "leaf",
-            "state": {
-              "type": "tasks_timeline_view",
-              "state": {},
-              "icon": "calendar-clock",
-              "title": "Tasks Timeline"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 417.5
+    "width": 300
   },
   "right": {
-    "id": "c6fed314183559d7",
+    "id": "48186aa67429d8b9",
     "type": "split",
     "children": [
       {
-        "id": "b7b9517113882729",
+        "id": "734d0257171dac94",
         "type": "tabs",
         "children": [
           {
-            "id": "8c76cb1ecf74dbab",
+            "id": "1aa287382b9ed59b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/就活/JR東海ES.md",
+                "file": "Projects/ITS symposium/ITSシンポジウム.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for JR東海ES"
+              "title": "Backlinks for ITSシンポジウム"
             }
           },
           {
-            "id": "f657f0dd11bc94af",
+            "id": "ff0fb07ab3ab2825",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ITS/シミュレーションの実装方法.md",
+                "file": "Projects/ITS symposium/ITSシンポジウム.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from シミュレーションの実装方法"
+              "title": "Outgoing links from ITSシンポジウム"
             }
           },
           {
-            "id": "3751b238780db3e0",
+            "id": "6c44e71e22c3faea",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -214,88 +137,50 @@
             }
           },
           {
-            "id": "be54f24ef9a59151",
+            "id": "563abc7031fb4a4b",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/就活/JR東海ES.md",
+                "file": "Projects/ITS symposium/ITSシンポジウム.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of JR東海ES"
+              "title": "Outline of ITSシンポジウム"
+            }
+          },
+          {
+            "id": "723450664cfc4411",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 384.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "templater-obsidian:Templater": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "6fd22fc36cc9bcf0",
-  "lastOpenFiles": [
-    "Projects/lecture/風の谷p653-p752読む.md",
-    "一旦整理しよ(就活は毎日やれ).md",
-    "Dashboards/All_tasks.md",
-    "Projects/ITS symposium/ITSシンポジウム.md",
-    "Templates/project_overview.md",
-    "Projects/デザスタ/デザスタ.md",
-    "Projects/Instr/INSTR.md",
-    "Projects/lecture/Lecture.md",
-    "Periodic/Daily/2025-11-30.md",
-    "Periodic/Daily/2025-11-29.md",
-    "Projects/デザスタ/WS内容第一稿松永さんに投げる.md",
-    "Projects/Instr/信号制御の基礎.md",
-    "Projects/ITS symposium/ショットガン作成.md",
-    "自動車と自転車双方を考慮した交通信号系統制御に関する研究.md",
-    "Projects/Instr/ORの信号制御論文.md",
-    "Projects/Instr/Somporn's thesis.md",
-    "Projects/Instr/Labseminar.md",
-    "国交省.md",
-    "Projects/lecture/風の谷10章.md",
-    "Periodic/Daily/2025-11-27.md",
-    "Projects/lecture/風の谷11章.md",
-    "Projects/lecture/風の谷第9章読む.md",
-    "和田健太郎のグリーンウェーブ.md",
-    "Projects/Instr/大口先生mtg資料.md",
-    "交通流影響評価/既往研究.md",
-    "交通流影響評価/疑問リスト.md",
-    "Projects/Instr",
-    "Projects/lecture",
-    "Projects/講義",
-    "Projects/HALCC",
-    "Projects/ささいなやつ",
-    "Projects/デザスタ",
-    "Projects/就活",
-    "Projects/ITS symposium",
-    "Periodic/Monthly",
-    "Periodic/Weekly",
-    "理論勉強/fig/sandh.png",
-    "理論勉強/fig/kv.jpg",
-    "理論勉強/fig/kq.jpg",
-    "理論勉強/fig/higeway.jpg",
-    "理論勉強/fig/dxA.jpg",
-    "理論勉強/fig/areaA.jpg",
-    "理論勉強/fig/3models.jpg",
-    "理論勉強/fig/vs.jpg",
-    "理論勉強/fig/timespace.jpg",
-    "理論勉強/fig/qv.jpg"
-  ]
+  "active": "ef90de93fefbdc44",
+  "lastOpenFiles": []
 }
