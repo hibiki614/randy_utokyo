@@ -1,84 +1,25 @@
 {
   "main": {
-    "id": "f408b6b1d5a6a442",
+    "id": "dc75c281ea831b09",
     "type": "split",
     "children": [
       {
-        "id": "94be8ddb5cc28088",
+        "id": "be296b66b6e3225f",
         "type": "tabs",
         "children": [
           {
-            "id": "ef90de93fefbdc44",
+            "id": "d5bbb9587f519e58",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/ITS symposium/ITSシンポジウム.md",
+                "file": "Projects/就活/土手さん面談.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ITSシンポジウム"
+              "title": "土手さん面談"
             }
-<<<<<<< HEAD
-=======
-          },
-          {
-            "id": "c320ed7927029473",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/lecture/風の谷11章.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "風の谷11章"
-            }
-          },
-          {
-            "id": "654c469f6c676b2d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/Instr/Labseminar.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Labseminar"
-            }
-          },
-          {
-            "id": "db60cd11775cbe38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/lecture/風の谷p653-p752読む.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "風の谷p653-p752読む"
-            }
-          },
-          {
-            "id": "6fd22fc36cc9bcf0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/就活/一旦自己分析.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "一旦自己分析"
-            }
->>>>>>> 8afbed68986a1eb73ef314dad87fe429f4730f4c
           }
         ]
       }
@@ -86,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "bfecb48c87f708e3",
+    "id": "cece73a31a560a6e",
     "type": "split",
     "children": [
       {
-        "id": "6579aaae4ff6e425",
+        "id": "e2c7083a151df990",
         "type": "tabs",
         "children": [
           {
-            "id": "05edbf01c673863c",
+            "id": "88809580ee9287ca",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -107,7 +48,7 @@
             }
           },
           {
-            "id": "8cbe0b92a089043c",
+            "id": "af40eab03a1d53bf",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -124,7 +65,7 @@
             }
           },
           {
-            "id": "d0453fdc9d37e42b",
+            "id": "d18c102623b4899d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -137,27 +78,23 @@
       }
     ],
     "direction": "horizontal",
-<<<<<<< HEAD
     "width": 300
-=======
-    "width": 200
->>>>>>> 8afbed68986a1eb73ef314dad87fe429f4730f4c
   },
   "right": {
-    "id": "48186aa67429d8b9",
+    "id": "bf3460179ef71166",
     "type": "split",
     "children": [
       {
-        "id": "734d0257171dac94",
+        "id": "cd23d6e5db907245",
         "type": "tabs",
         "children": [
           {
-            "id": "1aa287382b9ed59b",
+            "id": "fc09ddddc3c3f740",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/ITS symposium/ITSシンポジウム.md",
+                "file": "Projects/就活/土手さん面談.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ITSシンポジウム"
+              "title": "Backlinks for 土手さん面談"
             }
           },
           {
-            "id": "ff0fb07ab3ab2825",
+            "id": "cd80c409d59a0f84",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/ITS symposium/ITSシンポジウム.md",
+                "file": "Projects/就活/土手さん面談.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from ITSシンポジウム"
+              "title": "Outgoing links from 土手さん面談"
             }
           },
           {
-            "id": "6c44e71e22c3faea",
+            "id": "be876776313a3745",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -200,22 +137,22 @@
             }
           },
           {
-            "id": "563abc7031fb4a4b",
+            "id": "8fe82005d1450ada",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/ITS symposium/ITSシンポジウム.md",
+                "file": "Projects/就活/土手さん面談.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ITSシンポジウム"
+              "title": "Outline of 土手さん面談"
             }
           },
           {
-            "id": "723450664cfc4411",
+            "id": "57316a6591d97d1c",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -244,58 +181,8 @@
       "periodic-notes:Open today": false
     }
   },
-<<<<<<< HEAD
-  "active": "ef90de93fefbdc44",
-  "lastOpenFiles": []
-=======
-  "active": "6fd22fc36cc9bcf0",
+  "active": "d5bbb9587f519e58",
   "lastOpenFiles": [
-    "Projects/就活/JR東海面談対策.md",
-    "Projects/就活/一旦自己分析.md",
-    "Projects/就活/JR東海座談会対策.md",
-    "就活/自分史.md",
-    "Periodic/Daily/2025-11-30.md",
-    "Periodic/Daily/2025-11-29.md",
-    "Periodic/Daily/2025-11-27.md",
-    "Periodic/Daily/2025-11-23.md",
-    "Periodic/Daily/2025-11-25.md",
-    "就活/jr東海.md",
-    "線形計画問題(LP).pdf",
-    "自動車と自転車双方を考慮した交通信号系統制御に関する研究.md",
-    "国交省.md",
-    "響畠2.md",
-    "Untitled.md",
-    "Untitled.base",
-    "Untitled 1.md",
-    "講義メモ/Untitled.md",
-    "Projects/就活/JR東海ES.md",
-    "Projects/就活/阪急阪神佐野さん面談申し込み.md",
-    "Projects/就活/就活.md",
-    "一旦整理しよ(就活は毎日やれ).md",
-    "Projects/lecture/風の谷p653-p752読む.md",
-    "Dashboards/All_tasks.md",
-    "Projects/ITS symposium/ITSシンポジウム.md",
-    "Templates/project_overview.md",
-    "Projects/デザスタ/デザスタ.md",
-    "Projects/Instr/INSTR.md",
-    "Projects/Instr",
-    "Projects/lecture",
-    "Projects/講義",
-    "Projects/HALCC",
-    "Projects/ささいなやつ",
-    "Projects/デザスタ",
-    "Projects/就活",
-    "Projects/ITS symposium",
-    "理論勉強/fig/sandh.png",
-    "理論勉強/fig/kv.jpg",
-    "理論勉強/fig/kq.jpg",
-    "理論勉強/fig/higeway.jpg",
-    "理論勉強/fig/dxA.jpg",
-    "理論勉強/fig/areaA.jpg",
-    "理論勉強/fig/3models.jpg",
-    "理論勉強/fig/vs.jpg",
-    "理論勉強/fig/timespace.jpg",
-    "理論勉強/fig/qv.jpg"
+    "Projects/就活/土手さん面談.md"
   ]
->>>>>>> 8afbed68986a1eb73ef314dad87fe429f4730f4c
 }
