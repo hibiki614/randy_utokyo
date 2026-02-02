@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/ITS symposium/パイオニア0127.md",
+                "file": "Projects/就活/JR東海リクルーター面談ES.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "パイオニア0127"
+              "title": "JR東海リクルーター面談ES"
             }
           }
         ],
@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "bf3460179ef71166",
@@ -209,15 +210,22 @@
   },
   "active": "4a34012468ab5470",
   "lastOpenFiles": [
-    "Projects/就活/JR東日本面接対策.md",
+    "Projects/就活/JR東海ES.md",
+    "Projects/就活/JR東海座談会対策.md",
+    "Projects/就活/JR東海面談対策.md",
+    "Projects/就活/JR東海リクルーター面談ES.md",
+    "Projects/就活/日建ES.md",
+    "Projects/Instr/20260131.md",
+    "Projects/Instr/速度プロファイル設計アルゴリズム.md",
+    "Projects/Instr/Untitled 1.md",
+    "Projects/Instr/3.5.1→3.5.2.md",
     "Projects/ITS symposium/パイオニア0127.md",
+    "Projects/就活/JR東日本面接対策.md",
     "Projects/lecture/assignment5.md",
     "Projects/就活/パシコン小論文.md",
-    "Projects/就活/JR東海ES.md",
     "Projects/就活/一旦自己分析.md",
     "Projects/就活/就活.md",
     "Projects/就活/土手さん面談.md",
-    "Projects/就活/日建ES.md",
     "Projects/就活/東急.md",
     "Projects/Instr/Untitled.md",
     "講義メモ/道路交通工学E/assignment3.md",
@@ -237,13 +245,6 @@
     "Projects/lecture/Lecture.md",
     "Projects/lecture/風の谷第9章読む.md",
     "Projects/lecture/風の谷p653-p752読む.md",
-    "Projects/lecture/風の谷11章.md",
-    "Projects/lecture/風の谷10章.md",
-    "講義メモ/風の谷第三回.md",
-    "響畠1.md",
-    "Projects/Instr/2交差点間の系統制御に関する考察.md",
-    "Projects/Instr/INSTR.md",
-    "Dashboards/All_tasks.md",
     "講義メモ/道路交通工学E/fig/congest.jpg",
     "講義メモ/道路交通工学E/fig/freeflow.jpg",
     "講義メモ/道路交通工学E/fig/qkv.jpg.~tmp",
