@@ -14,9 +14,17 @@ import matplotlib.pyplot as plt
 # =====================
 # ここだけ編集：計算したい対象（複数OK）
 # =====================
-TARGET_ROUTE_IDS = [311]
-TARGET_SPEEDS = [50]
+TARGET_ROUTE_IDS = [311, 312, 313, 314]   # このPC担当
+# TARGET_ROUTE_IDS = [321, 322, 323, 324, 331, 332, 333, 334]
+TARGET_SPEEDS = []                       # 空=全速度を対象にする（後述の speed_hit を対応）
 SPEED_TOL = 1e-6
+def speed_hit(val):
+    if len(speed_targets) == 0:
+        return True
+    val = float(val)
+    return np.any(np.isclose(val, speed_targets, atol=SPEED_TOL, rtol=0.0))
+speed_targets = np.array([float(x) for x in TARGET_SPEEDS], dtype=float)
+
 
 # =====================
 # 固定パラメータ
