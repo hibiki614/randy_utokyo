@@ -14,16 +14,14 @@ import matplotlib.pyplot as plt
 # =====================
 # ここだけ編集：計算したい対象（複数OK）
 # =====================
-TARGET_ROUTE_IDS = [311, 312, 313, 314]   # このPC担当
 # TARGET_ROUTE_IDS = [321, 322, 323, 324, 331, 332, 333, 334]
-TARGET_SPEEDS = []                       # 空=全速度を対象にする（後述の speed_hit を対応）
+TARGET_ROUTE_IDS = [311, 312, 313, 314]
+
+TARGET_SPEEDS = [
+    20.0, 22.5, 25.0, 27.5, 30.0, 32.5, 35.0,
+    37.5, 40.0, 42.5, 45.0, 47.5, 50.0
+]
 SPEED_TOL = 1e-6
-def speed_hit(val):
-    if len(speed_targets) == 0:
-        return True
-    val = float(val)
-    return np.any(np.isclose(val, speed_targets, atol=SPEED_TOL, rtol=0.0))
-speed_targets = np.array([float(x) for x in TARGET_SPEEDS], dtype=float)
 
 
 # =====================
@@ -594,6 +592,6 @@ for idx in idxs:
               best["x1opt"], best["x2opt"], best["x3opt"])
         plot_best_cumulative(L01, L12, L23, spd, best)
 
-out_path = "experiment_with_offsets_filtered_cum.xlsx"
+out_path = "results.xlsx"
 df.to_excel(out_path, index=False)
 print("Wrote:", out_path)
