@@ -9,13 +9,15 @@ Created on Thu Feb  5 01:19:22 2026
 import pandas as pd
 import numpy as np
 import time
+import matplotlib
+matplotlib.use("Agg")   # CMD実行でも止まらない（保存専用）
 import matplotlib.pyplot as plt
 
 # =====================
 # ここだけ編集：計算したい対象（複数OK）
 # =====================
-# TARGET_ROUTE_IDS = [321, 322, 323, 324, 331, 332, 333, 334]
-TARGET_ROUTE_IDS = [311, 312, 313, 314]
+TARGET_ROUTE_IDS = [321, 322, 323, 324, 331, 332, 333, 334]
+# TARGET_ROUTE_IDS = [311, 312, 313, 314]
 
 TARGET_SPEEDS = [
     20.0, 22.5, 25.0, 27.5, 30.0, 32.5, 35.0,
@@ -45,6 +47,8 @@ EXTRA_CYCLES_MARGIN = 10   # 普通は十分。足りなければ自動延長も
 
 # プロット（最適解で累積図を描きたい時だけ True）
 PLOT_CUMULATIVE_FOR_BEST = True
+PLOT_SAVE = True
+PLOT_DIR = "plots"   # ここにpngが溜まる
 
 # =====================
 # ユーティリティ：区分一定 intervals
@@ -416,6 +420,58 @@ def simulate_direction_cum(L01, L12, L23, speed_kmh, x, start_node):
         "n1": n1,
         "t_end": t_end,
     }
+import os
+
+
+def save_best_cumulative_plot(L01, L12, L23, speed_kmh, best, route_id):
+    # best: {"x1opt","x2opt","x3opt"} を含む辞書
+    x = {0:0.0, 1:best["x1opt"], 2:best["x2opt"], 3:best["x3opt"]}
+
+    dbg = evaluate_offsets_cum(L01, L12, L23, speed_kmh, x[1], x[2], x[3], want_debug=True)
+    f = dbg["_debug_f"]
+    b = dbg["_debug_b"]
+
+    fig, axs = plt.subplots(2, 2, figsize=(12, 8))
+
+    # Forward
+    axs[0,0].set_title("Forward: Source A(t) and Exit D(t)")
+    axs[0,0].plot(f["A_src"].t, f["A_src"].N, label="A_src", linewidth=2)
+    axs[0,0].plot(f["D_out"].t, f["D_out"].N, label="D_out", linewidth=2)
+    axs[0,0].legend(); axs[0,0].set_xlabel("t [s]"); axs[0,0].set_ylabel("N [veh]")
+
+    # Backward
+    axs[0,1].set_title("Backward: Source A(t) and Exit D(t)")
+    axs[0,1].plot(b["A_src"].t, b["A_src"].N, label="A_src", linewidth=2)
+    axs[0,1].plot(b["D_out"].t, b["D_out"].N, label="D_out", linewidth=2)
+    axs[0,1].legend(); axs[0,1].set_xlabel("t [s]"); axs[0,1].set_ylabel("N [veh]")
+
+    # Forward node D
+    axs[1,0].set_title("Forward: Node D(t)")
+    for node in [1,2,3]:
+        cf = f["D_nodes"][node]
+        axs[1,0].plot(cf.t, cf.N, label=f"D_node{node}", linewidth=2)
+    axs[1,0].legend(); axs[1,0].set_xlabel("t [s]"); axs[1,0].set_ylabel("N [veh]")
+
+    # Backward node D
+    axs[1,1].set_title("Backward: Node D(t)")
+    for node in [2,1,0]:
+        cf = b["D_nodes"][node]
+        axs[1,1].plot(cf.t, cf.N, label=f"D_node{node}", linewidth=2)
+    axs[1,1].legend(); axs[1,1].set_xlabel("t [s]"); axs[1,1].set_ylabel("N [veh]")
+
+    plt.tight_layout()
+
+    if PLOT_SAVE:
+        os.makedirs(PLOT_DIR, exist_ok=True)
+        fname = (
+            f"cum_route{int(route_id)}_v{speed_kmh:.1f}"
+            f"_x{best['x1opt']:.1f}_{best['x2opt']:.1f}_{best['x3opt']:.1f}.png"
+        )
+        out_path = os.path.join(PLOT_DIR, fname)
+        fig.savefig(out_path, dpi=200)
+        print("Saved plot:", out_path)
+
+    plt.close(fig)   # ←これが「止まらない」ための核心
 
 # =====================
 # 双方向合算評価（目的関数は旅行時間ベース遅れ）
@@ -568,6 +624,11 @@ for idx in idxs:
     spd = float(r["系統速度"])
 
     best = optimize_one_cum(L01, L12, L23, spd)
+
+# ←ここに追加
+    save_best_cumulative_plot(L01, L12, L23, spd, best, route_id=r["路線番号"])
+
+# その後に dfへ書き戻し...
 
     # Excelへ書き戻し（必要列は好きに増やしてOK）
     df.at[idx, "x0opt"] = best["x0opt"]
