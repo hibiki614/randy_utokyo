@@ -600,7 +600,7 @@ def plot_best_cumulative(L01, L12, L23, speed_kmh, best):
 # =====================
 # Excel read -> filter -> compute -> write
 # =====================
-in_path = "experiment2.xlsx"
+in_path = "experiment.xlsx"
 df = pd.read_excel(in_path)
 
 route_set = set(int(x) for x in TARGET_ROUTE_IDS)
@@ -653,15 +653,15 @@ for idx in idxs:
               best["x1opt"], best["x2opt"], best["x3opt"])
         plot_best_cumulative(L01, L12, L23, spd, best)
 
-out_path = "results0.25ver.xlsx"
+out_path = "results0.5ver.xlsx"
 df.to_excel(out_path, index=False)
 print("Wrote:", out_path)
 #%%各交差点の遅れ
 import pandas as pd
 import numpy as np
 
-IN_PATH  = "results0.25ver.xlsx"
-OUT_PATH = "results0.25ver_final.xlsx"
+IN_PATH  = "results0.5ver.xlsx"
+OUT_PATH = "results0.5ver_final.xlsx"
 
 def mean_wait_eval(A_cum, D_cum, n0, n1):
     I_arr = A_cum.inverse_integral(n0, n1)
