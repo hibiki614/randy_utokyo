@@ -97,8 +97,8 @@ def fill_platoon_band(ax, arr, pas, seg, direction, X):
 # =====================
 # INPUT / OUTPUT
 # =====================
-IN_XLSX = "results_final.xlsx"
-OUT_DIR = "timespace_png"
+IN_XLSX = "results0.25ver_final.xlsx"
+OUT_DIR = "timespace_png0.25ver"
 
 # =====================
 # FILTER（optional）

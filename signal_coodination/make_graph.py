@@ -58,8 +58,8 @@ def prettify_axes(ax):
 # =========================
 # 3) 入力と列名
 # =========================
-xlsx_path = "results_final.xlsx"
-out_dir = "plots_by_route"
+xlsx_path = "results0.25ver_final.xlsx"
+out_dir = "plots_by_route0.25ver"
 os.makedirs(out_dir, exist_ok=True)
 
 COL_ROUTE = "路線番号"
