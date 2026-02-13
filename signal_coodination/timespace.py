@@ -72,10 +72,7 @@ def pts_to_xy(pts, X):
 
 def fill_platoon_band(ax, arr, pas, seg, direction, X):
     a, b = seg
-    if b - a <= 0:
-        return
-    if b - a == 1:
-        # 1台だけの塊は塗る面が無いので（必要なら線だけ描く）
+    if b - a <= 1:
         return
 
     k0 = a
@@ -90,9 +87,9 @@ def fill_platoon_band(ax, arr, pas, seg, direction, X):
     poly_t = np.concatenate([t_lo, t_hi[::-1]])
     poly_y = np.concatenate([y_lo, y_hi[::-1]])
 
+    # 塗るだけ（境界線なし）
     ax.fill(poly_t, poly_y, color=BAND_FILL, alpha=BAND_ALPHA, linewidth=0)
-    ax.plot(t_lo, y_lo, color=BAND_EDGE, linewidth=BAND_EDGE_LW)
-    ax.plot(t_hi, y_hi, color=BAND_EDGE, linewidth=BAND_EDGE_LW)
+
 
 # =====================
 # INPUT / OUTPUT
