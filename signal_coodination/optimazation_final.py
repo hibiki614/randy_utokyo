@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # ここだけ編集：計算したい対象（複数OK）
 # =====================
 # TARGET_ROUTE_IDS = [321, 322, 323, 324, 331, 332, 333, 334]
-TARGET_ROUTE_IDS = [311, 312, 313, 314]
+TARGET_ROUTE_IDS = [314, 324]
 
 TARGET_SPEEDS = [
     20.0, 22.5, 25.0, 27.5, 30.0, 32.5, 35.0,
@@ -592,7 +592,7 @@ for idx in idxs:
               best["x1opt"], best["x2opt"], best["x3opt"])
         plot_best_cumulative(L01, L12, L23, spd, best)
 
-out_path = "results.xlsx"
+out_path = "results_314_324.xlsx"
 df.to_excel(out_path, index=False)
 print("Wrote:", out_path)
 
@@ -600,8 +600,8 @@ print("Wrote:", out_path)
 import pandas as pd
 import numpy as np
 
-IN_PATH  = "results.xlsx"
-OUT_PATH = "results_final.xlsx"
+IN_PATH  = "results_314_324.xlsx"
+OUT_PATH = "results_final_314_324.xlsx"
 
 def mean_wait_eval(A_cum, D_cum, n0, n1):
     I_arr = A_cum.inverse_integral(n0, n1)
