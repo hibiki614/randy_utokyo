@@ -11,7 +11,7 @@ RESULTS_SHEET = "Sheet1"   # 必要に応じて変更
 OUT_DIR = "interval_summary_maximal"
 
 # TTT一定とみなす閾値
-TTT_CONST_THRESHOLD = 0.0
+TTT_CONST_THRESHOLD = 0.1
 
 os.makedirs(OUT_DIR, exist_ok=True)
 
