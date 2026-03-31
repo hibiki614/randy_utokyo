@@ -1,92 +1,41 @@
 {
   "main": {
-    "id": "dc75c281ea831b09",
+    "id": "66b929dd075b4e43",
     "type": "split",
     "children": [
       {
-        "id": "be296b66b6e3225f",
+        "id": "18d42628b1c2c112",
         "type": "tabs",
         "children": [
           {
-            "id": "d5bbb9587f519e58",
+            "id": "9b911e812beb6834",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboards/All_tasks.md",
+                "file": "Periodic/Weekly/2026-W14.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "All_tasks"
-            }
-          },
-          {
-            "id": "32a53bbab7f89038",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-<<<<<<< Updated upstream
-                "file": "Dashboards/M2の1年間をどう過ごすか.md",
-=======
-                "file": "Projects/Instr/20260131.md",
->>>>>>> Stashed changes
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-<<<<<<< Updated upstream
-              "title": "M2の1年間をどう過ごすか"
-            }
-          },
-          {
-            "id": "4ebb718ac6d7f1be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dashboards/M2の1年間をどう過ごすか.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "M2の1年間をどう過ごすか"
-            }
-          },
-          {
-            "id": "9eef3b030fef4aff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "無題のファイル.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "無題のファイル"
-=======
-              "title": "20260131"
->>>>>>> Stashed changes
+              "title": "2026-W14"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "cece73a31a560a6e",
+    "id": "e07a4d870958d4e1",
     "type": "split",
     "children": [
       {
-        "id": "e2c7083a151df990",
+        "id": "793f6b2433e52cd5",
         "type": "tabs",
         "children": [
           {
-            "id": "88809580ee9287ca",
+            "id": "5d6bfcfb3b7568d1",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -99,7 +48,7 @@
             }
           },
           {
-            "id": "af40eab03a1d53bf",
+            "id": "37f5f5f2fd27b276",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -112,21 +61,21 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "検索"
             }
           },
           {
-            "id": "d18c102623b4899d",
+            "id": "9c1e0be4f6f21d5e",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "ブックマーク"
             }
           },
           {
-            "id": "57316a6591d97d1c",
+            "id": "042ed26f8d43d613",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -134,38 +83,29 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
-          },
-          {
-            "id": "ba1dde388ca14615",
-            "type": "leaf",
-            "state": {
-              "type": "tasks_timeline_view",
-              "state": {},
-              "icon": "calendar-clock",
-              "title": "Tasks Timeline"
-            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 379.5
+    "width": 300
   },
   "right": {
-    "id": "bf3460179ef71166",
+    "id": "42f470b6714bf55f",
     "type": "split",
     "children": [
       {
-        "id": "cd23d6e5db907245",
+        "id": "d46a58f821867666",
         "type": "tabs",
         "children": [
           {
-            "id": "fc09ddddc3c3f740",
+            "id": "fdd5ffec7ceaa3b0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/Instr/アブスト構成.md",
+                "file": "Periodic/Weekly/2026-W14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,25 +115,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "アブスト構成へのバックリンク"
+              "title": "2026-W14へのバックリンク"
             }
           },
           {
-            "id": "cd80c409d59a0f84",
+            "id": "c7e8385e4ebc1c8d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/就活/土手さん面談.md",
+                "file": "Periodic/Weekly/2026-W14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 土手さん面談"
+              "title": "2026-W14からのアウトゴーイングリンク"
             }
           },
           {
-            "id": "be876776313a3745",
+            "id": "abcf8f0cb9e071be",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -204,25 +144,26 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "タグ"
             }
           },
           {
-            "id": "8fe82005d1450ada",
+            "id": "cbd3f8e0009bae6c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/就活/日建ES.md",
+                "file": "Periodic/Weekly/2026-W14.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 日建ES"
+              "title": "2026-W14のアウトライン"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -242,69 +183,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "9eef3b030fef4aff",
+  "active": "9b911e812beb6834",
   "lastOpenFiles": [
-    "Dashboards/M2の1年間をどう過ごすか.md",
-    "無題のファイル.md",
-    "Projects/研究/研究.md",
-    "Projects/研究",
-    "Projects/build up!/体力づくり.md",
-    "Projects/build up!",
-    "Dashboards/All_tasks.md",
-    "Projects/Instr/アブスト構成.md",
-    "Projects/Instr/abstruct.md",
-    "Projects/就活/JR東日本ES.md",
-    "Projects/就活/就活.md",
-    "Projects/就活/JR東海統合報告書.md",
-    "Projects/就活/JR東海面接対策.md",
-    "日本語版アブスト再構成.md",
-    "Projects/Instr/INSTR.md",
-<<<<<<< Updated upstream
-    "Projects/Instr/abst2.md",
-=======
-    "Projects/Instr/20260131.md",
-    "Projects/Instr/abst2.md",
-    "Projects/Instr/2交差点間の系統制御に関する考察.md",
-    "Projects/Instr/3.5.1→3.5.2.md",
->>>>>>> Stashed changes
-    "Periodic/Daily/2026-02-26.md",
-    "Periodic/Weekly/2026-W09.md",
-    "Periodic/Monthly/2026-02.md",
-    "Projects/HALCC/トークイベント構想.md",
-    "Periodic/Monthly/Untitled.md",
-    "Projects/就活/就活の軸整理.md",
-    "Projects/HALCC/10周年記念イベント.md",
-    "Projects/就活/JR東海ES.md",
-    "Projects/就活/東海面談対策.md",
-    "Projects/就活/日建ES.md",
-    "Projects/就活/JR東日本面接対策.md",
-    "Projects/Instr/word貼り付け用abst.md",
-<<<<<<< Updated upstream
-=======
-    "Projects/Instr/abstruct.md",
-    "講義メモ/道路交通工学E/assignment3.md",
-    "Projects/就活/JR東海リクルーター面談ES.md",
-    "Projects/就活/JR東海面談対策.md",
-    "Projects/就活/JR東海座談会対策.md",
-    "Projects/Instr/速度プロファイル設計アルゴリズム.md",
->>>>>>> Stashed changes
-    "講義メモ/3.5.1→3.5.2.pdf",
-    "講義メモ/20260131.pdf",
-    "講義メモ/速度プロファイル設計アルゴリズム.pdf",
-    "講義メモ/道路交通工学E/fig/case1ts.jpg",
-    "講義メモ/道路交通工学E/fig/case2ts.jpg",
-    "講義メモ/道路交通工学E/fig/clothoid.jpg",
-    "講義メモ/道路交通工学E/fig/pdf.png",
-    "講義メモ/道路交通工学E/fig/mms.png",
-    "講義メモ/道路交通工学E/fig/graph.jpg",
-    "講義メモ/道路交通工学E/fig/1min.png",
-    "講義メモ/道路交通工学E/fig/15sec.png",
-    "講義メモ/assignment2_37-256047_hibikihatakenaka.pdf",
-    "講義メモ/道路交通工学E/fig/congest.jpg",
-    "講義メモ/道路交通工学E/fig/freeflow.jpg",
-    "講義メモ/道路交通工学E/fig/qkv.jpg.~tmp",
-    "講義メモ/道路交通工学E/fig",
-    "講義メモ/道路交通工学E",
-    "Projects/lecture/fig"
+    "Periodic/Weekly/2026-W10.md",
+    "Periodic/Weekly/2026-W14.md",
+    "Dashboards/M2の1年間をどう過ごすか.md"
   ]
 }
