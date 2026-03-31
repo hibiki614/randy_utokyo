@@ -27,11 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< Updated upstream
                 "file": "Dashboards/M2の1年間をどう過ごすか.md",
+=======
+                "file": "Projects/Instr/20260131.md",
+>>>>>>> Stashed changes
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< Updated upstream
               "title": "M2の1年間をどう過ごすか"
             }
           },
@@ -61,6 +66,9 @@
               },
               "icon": "lucide-file",
               "title": "無題のファイル"
+=======
+              "title": "20260131"
+>>>>>>> Stashed changes
             }
           }
         ],
@@ -251,7 +259,14 @@
     "Projects/就活/JR東海面接対策.md",
     "日本語版アブスト再構成.md",
     "Projects/Instr/INSTR.md",
+<<<<<<< Updated upstream
     "Projects/Instr/abst2.md",
+=======
+    "Projects/Instr/20260131.md",
+    "Projects/Instr/abst2.md",
+    "Projects/Instr/2交差点間の系統制御に関する考察.md",
+    "Projects/Instr/3.5.1→3.5.2.md",
+>>>>>>> Stashed changes
     "Periodic/Daily/2026-02-26.md",
     "Periodic/Weekly/2026-W09.md",
     "Periodic/Monthly/2026-02.md",
@@ -264,6 +279,15 @@
     "Projects/就活/日建ES.md",
     "Projects/就活/JR東日本面接対策.md",
     "Projects/Instr/word貼り付け用abst.md",
+<<<<<<< Updated upstream
+=======
+    "Projects/Instr/abstruct.md",
+    "講義メモ/道路交通工学E/assignment3.md",
+    "Projects/就活/JR東海リクルーター面談ES.md",
+    "Projects/就活/JR東海面談対策.md",
+    "Projects/就活/JR東海座談会対策.md",
+    "Projects/Instr/速度プロファイル設計アルゴリズム.md",
+>>>>>>> Stashed changes
     "講義メモ/3.5.1→3.5.2.pdf",
     "講義メモ/20260131.pdf",
     "講義メモ/速度プロファイル設計アルゴリズム.pdf",
