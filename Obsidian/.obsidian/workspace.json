@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "2026-W14"
             }
+          },
+          {
+            "id": "ab40f73745158450",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "リリースノート 1.12.7"
+            }
           }
         ]
       }
