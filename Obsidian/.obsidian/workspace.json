@@ -22,18 +22,21 @@
             }
           },
           {
-            "id": "ab40f73745158450",
+            "id": "0c3f2000bf51ad5b",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.12.7"
+                "file": "inbox/東海入ってどんな人生を歩みたいか.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "リリースノート 1.12.7"
+              "icon": "lucide-file",
+              "title": "東海入ってどんな人生を歩みたいか"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,8 +99,7 @@
               "title": "Calendar"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -195,10 +197,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "9b911e812beb6834",
+  "active": "0c3f2000bf51ad5b",
   "lastOpenFiles": [
-    "Periodic/Weekly/2026-W10.md",
     "Periodic/Weekly/2026-W14.md",
+    "inbox/東海入ってどんな人生を歩みたいか.md",
+    "Periodic/Weekly/2026-W10.md",
     "Dashboards/M2の1年間をどう過ごすか.md"
   ]
 }
