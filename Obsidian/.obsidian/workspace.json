@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/東海入ってどんな人生を歩みたいか.md",
+                "file": "Projects/就活/JR東海座談会対策.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "東海入ってどんな人生を歩みたいか"
+              "title": "JR東海座談会対策"
             }
           }
         ],
@@ -199,9 +199,13 @@
   },
   "active": "0c3f2000bf51ad5b",
   "lastOpenFiles": [
-    "Periodic/Weekly/2026-W14.md",
+    "Projects/就活/JR東海面接対策.md",
+    "Projects/就活/JR東海面談対策.md",
+    "Projects/就活/東海面談対策.md",
+    "Projects/研究/研究全体.md",
+    "Dashboards/M2の1年間をどう過ごすか.md",
     "inbox/東海入ってどんな人生を歩みたいか.md",
-    "Periodic/Weekly/2026-W10.md",
-    "Dashboards/M2の1年間をどう過ごすか.md"
+    "Periodic/Weekly/2026-W14.md",
+    "Periodic/Weekly/2026-W10.md"
   ]
 }
