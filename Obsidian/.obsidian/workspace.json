@@ -1,42 +1,24 @@
 {
   "main": {
-    "id": "66b929dd075b4e43",
+    "id": "214f4ccf330786fc",
     "type": "split",
     "children": [
       {
-        "id": "18d42628b1c2c112",
+        "id": "e45280d4201ce5d5",
         "type": "tabs",
         "children": [
           {
-            "id": "9b911e812beb6834",
+            "id": "cb1509be5bbf34da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboards/M2の1年間をどう過ごすか.md",
+                "file": "Projects/lecture/交通情報学/交通情報学第二回.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< Updated upstream
-              "title": "2026-W14"
-            }
-          },
-          {
-            "id": "0c3f2000bf51ad5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/研究/輪読会①.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "輪読会①"
-=======
-              "title": "M2の1年間をどう過ごすか"
->>>>>>> Stashed changes
+              "title": "交通情報学第二回"
             }
           }
         ]
@@ -45,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "e07a4d870958d4e1",
+    "id": "38d1ea9e9e7a0074",
     "type": "split",
     "children": [
       {
-        "id": "793f6b2433e52cd5",
+        "id": "c88ad382e7d7e24b",
         "type": "tabs",
         "children": [
           {
-            "id": "5d6bfcfb3b7568d1",
+            "id": "cdcd895df2ad35c4",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -66,7 +48,7 @@
             }
           },
           {
-            "id": "37f5f5f2fd27b276",
+            "id": "1dd742a68223fbed",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -83,23 +65,13 @@
             }
           },
           {
-            "id": "9c1e0be4f6f21d5e",
+            "id": "9a8eb65eab4fa7ce",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
               "title": "ブックマーク"
-            }
-          },
-          {
-            "id": "042ed26f8d43d613",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
             }
           }
         ]
@@ -110,20 +82,20 @@
     "collapsed": true
   },
   "right": {
-    "id": "42f470b6714bf55f",
+    "id": "418bf2dd99ad994e",
     "type": "split",
     "children": [
       {
-        "id": "d46a58f821867666",
+        "id": "81b09ca7e6d794a8",
         "type": "tabs",
         "children": [
           {
-            "id": "fdd5ffec7ceaa3b0",
+            "id": "a2f542fc8eef57ea",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Periodic/Weekly/2026-W14.md",
+                "file": "Projects/lecture/交通情報学/交通情報学第二回.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,25 +105,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "2026-W14へのバックリンク"
+              "title": "交通情報学第二回へのバックリンク"
             }
           },
           {
-            "id": "c7e8385e4ebc1c8d",
+            "id": "7f3d2b6ce4894e6a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Periodic/Weekly/2026-W14.md",
+                "file": "Projects/lecture/交通情報学/交通情報学第二回.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "2026-W14からのアウトゴーイングリンク"
+              "title": "交通情報学第二回からのアウトゴーイングリンク"
             }
           },
           {
-            "id": "abcf8f0cb9e071be",
+            "id": "9d6a385a1ef76cf9",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -166,22 +138,31 @@
             }
           },
           {
-            "id": "cbd3f8e0009bae6c",
+            "id": "0a64568e81d980db",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Periodic/Weekly/2026-W14.md",
+                "file": "Projects/lecture/交通情報学/交通情報学第二回.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026-W14のアウトライン"
+              "title": "交通情報学第二回のアウトライン"
+            }
+          },
+          {
+            "id": "1426d9b86670ba8e",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -201,34 +182,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "9b911e812beb6834",
+  "active": "cb1509be5bbf34da",
   "lastOpenFiles": [
-<<<<<<< Updated upstream
-    "Projects/Instr/INSTR.md",
-    "Projects/研究/輪読会①.md",
-    "Projects/Instr/Labseminar.md",
-    "Projects/Instr/abstruct.md",
-    "Projects/Instr/20260131.md",
-    "Projects/Instr/2交差点間の系統制御に関する考察.md",
-    "Projects/Instr/大口先生mtg資料.md",
-    "Projects/Instr/速度プロファイル設計アルゴリズム.md",
-    "Projects/Instr/信号制御の基礎.md",
-    "Projects/Instr/3.5.1→3.5.2.md",
-=======
-    "Periodic/Weekly/2026-W14.md",
-    "inbox/語学力向上.md",
-    "Dashboards/M2の1年間をどう過ごすか.md",
-    "Projects/build up!/体力づくり.md",
-    "Projects/研究/研究全体.md",
-    "Projects/デザスタ/デザスタ.md",
-    "Projects/就活/就活.md",
-    "Dashboards/M2の1年間のデザイン・改.md",
->>>>>>> Stashed changes
-    "Projects/就活/JR東海座談会対策.md",
-    "Projects/就活/JR東海面接対策.md",
-    "Projects/就活/JR東海面談対策.md",
-    "Projects/就活/東海面談対策.md",
-    "inbox/東海入ってどんな人生を歩みたいか.md",
-    "Periodic/Weekly/2026-W10.md"
+    "Projects/lecture/交通情報学/交通情報学第一回.md",
+    "Projects/lecture/交通情報学/交通情報学第二回.md",
+    "Projects/lecture/Lecture.md",
+    "Projects/lecture/交通情報学"
   ]
 }
