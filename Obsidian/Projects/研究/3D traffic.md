@@ -1,0 +1,9 @@
+- When we use the observation data, it is important to check its accuracy.
+	- especailly motercycles are difficult to be observed accurately
+- dorone usage
+	- collecting data
+	- traffic manegement
+	- now there are moving drone experiments 
+	- 
+- Covidで影響を受けたのはどこか？
+	- 
