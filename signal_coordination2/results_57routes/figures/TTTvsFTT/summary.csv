@@ -1,0 +1,2 @@
+route_count,figure_count,x_axis,x_ticks,y_axis,FTT_style,TT_style,FTT_note,TT_note,label_change
+57,57,10-50 km/h,"10, 20, 30, 40, 50",route-specific clean scale,dashed line with square markers,solid line with circular markers,computed for 10-50 km/h from total route length and speed,"shown only at 20-50 km/h; 10, 12.5, 15, 17.5 km/h left blank",TTT renamed to TT

@@ -1,0 +1,2 @@
+route_count,figure_count,x_axis_common,y_axis_common,curve_type,pillar_style,candidate_style,legend_position,overlap_indication
+57,57,10–50 km/h,0.00–44.00 s/veh,continuous curves evaluated at 1601 speed values per route,solid black line,dashed colored lines,outside right,sparse open markers where each candidate equals the pillar envelope
