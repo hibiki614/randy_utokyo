@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "20260615"
             }
+          },
+          {
+            "id": "28a7b7b6c5c01645",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "デザスタ.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "デザスタ"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,8 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "418bf2dd99ad994e",
@@ -182,10 +194,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "cb1509be5bbf34da",
+  "active": "28a7b7b6c5c01645",
   "lastOpenFiles": [
-    "Projects/研究/0604.md",
+    "inbox/20260719.md",
     "Projects/研究/20260615.md",
+    "Projects/研究/0604.md",
     "Projects/lecture/交通情報学/交通情報学第三回.md",
     "Projects/研究/3D traffic.md",
     "Projects/研究/研究全体.md",
