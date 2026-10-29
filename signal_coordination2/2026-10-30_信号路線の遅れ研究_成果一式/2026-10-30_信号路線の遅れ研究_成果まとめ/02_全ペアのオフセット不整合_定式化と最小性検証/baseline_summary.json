@@ -1,0 +1,13 @@
+{
+  "anchor_vs_D_r": 0.9570946724946077,
+  "anchor_vs_D_within_route_r": 0.8678536089538671,
+  "residual_vs_R0_r": 0.5832459467045708,
+  "residual_vs_Rw_r": 0.4570623648033211,
+  "residual_vs_R0_within_route_r": 0.13921074880574041,
+  "residual_vs_Rw_within_route_r": -0.1367557158893708,
+  "n_zero_incompatibility": 39,
+  "zero_incompatibility_D_min": 0.0,
+  "zero_incompatibility_D_max": 54.54545454544489,
+  "n_D_below_pair_sum": 257,
+  "n_D_below_anchor": 0
+}

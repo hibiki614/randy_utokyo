@@ -1,0 +1,120 @@
+[
+  {
+    "model": "S1",
+    "columns": [
+      "S1"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      28.013061702058177
+    ]
+  },
+  {
+    "model": "R0",
+    "columns": [
+      "R0"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      26.922524337643335
+    ]
+  },
+  {
+    "model": "Rw",
+    "columns": [
+      "Rw"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      23.596922467217706
+    ]
+  },
+  {
+    "model": "S1+R0",
+    "columns": [
+      "S1",
+      "R0"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      24.49524660002632,
+      3.7126299180809466
+    ]
+  },
+  {
+    "model": "S1+Rw",
+    "columns": [
+      "S1",
+      "Rw"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      38.30886960001256,
+      -11.301851527704251
+    ]
+  },
+  {
+    "model": "S1+R0_fast",
+    "columns": [
+      "S1",
+      "R0_fast"
+    ],
+    "standardized_coefficients": [
+      65.14994865897437,
+      24.495246600026324,
+      3.7126299180809363
+    ]
+  },
+  {
+    "model": "S1+Rw_fast",
+    "columns": [
+      "S1",
+      "Rw_fast"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      38.30886960001257,
+      -11.301851527704242
+    ]
+  },
+  {
+    "model": "n+S1",
+    "columns": [
+      "n",
+      "S1"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      -10.40765958186661,
+      37.7823157218438
+    ]
+  },
+  {
+    "model": "n+S1+R0",
+    "columns": [
+      "n",
+      "S1",
+      "R0"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      -11.682141454929532,
+      32.90133284146508,
+      6.413845199987942
+    ]
+  },
+  {
+    "model": "n+S1+Rw",
+    "columns": [
+      "n",
+      "S1",
+      "Rw"
+    ],
+    "standardized_coefficients": [
+      65.14994865897435,
+      -8.721947766662076,
+      45.58714327317195,
+      -10.304391776389746
+    ]
+  }
+]

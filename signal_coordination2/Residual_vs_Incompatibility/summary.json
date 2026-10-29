@@ -1,0 +1,8 @@
+{
+  "n_cases": 260,
+  "n_corridors": 20,
+  "residual_min_s": 0.0,
+  "residual_max_s": 68.99999999998612,
+  "zero_incompatibility_count": 39,
+  "zero_incompatibility_residual_max_s": 8.879999999990353
+}

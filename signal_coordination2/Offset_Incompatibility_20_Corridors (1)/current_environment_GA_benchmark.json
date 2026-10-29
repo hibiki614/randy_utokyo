@@ -1,0 +1,59 @@
+[
+  {
+    "route": "N04_A",
+    "speed_kmh": 40,
+    "three_seed_runtime_s": 2.675262032000319,
+    "best_found_delay_s": -1.333972932116012e-10,
+    "warmup_cycles": 12,
+    "population": 96,
+    "generations": 150,
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "individual_run_s": [
+      0.9749389380003777,
+      0.7927994980000221,
+      0.899275765999846
+    ]
+  },
+  {
+    "route": "N08_B",
+    "speed_kmh": 40,
+    "three_seed_runtime_s": 3.29316694299996,
+    "best_found_delay_s": 89.99999999998477,
+    "warmup_cycles": 12,
+    "population": 96,
+    "generations": 150,
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "individual_run_s": [
+      1.0594809470003383,
+      1.2357287240001824,
+      0.9910542689995054
+    ]
+  },
+  {
+    "route": "N10_D",
+    "speed_kmh": 40,
+    "three_seed_runtime_s": 3.940039428000091,
+    "best_found_delay_s": 73.19999999999578,
+    "warmup_cycles": 12,
+    "population": 96,
+    "generations": 150,
+    "seeds": [
+      11,
+      22,
+      33
+    ],
+    "individual_run_s": [
+      1.3383983189996798,
+      1.2950705920002292,
+      1.2988624549998349
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "all_conditions_certified_unweighted": 260,
+  "all_conditions_certified_weighted": 260,
+  "n_conditions": 260,
+  "max_relative_gap": 7.713498375381472e-08,
+  "max_change_unweighted": 5.684341886080802e-14,
+  "max_change_weighted": 2.7284841053187847e-12,
+  "random_phase_tests": 320,
+  "valid_cycle_inequality_checks": 30736,
+  "max_phase_transform_error": 3.552713678800501e-15
+}

@@ -1,0 +1,6 @@
+{
+  "total_wall_s": 204.57047866200082,
+  "milp_time_limit_s": 1.0,
+  "n_conditions": 260,
+  "n_pair_conditions": 6110
+}
